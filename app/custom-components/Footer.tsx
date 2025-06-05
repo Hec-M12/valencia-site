@@ -25,10 +25,10 @@ export default function Footer() {
           {/* Información de contacto */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-instituto-yellow">Información de contacto</h4>
-            <div className="space-y-2 text-gray-300">
-              <p><MapPinned /> Col. Palmira, Tegucigalpa, Honduras</p>
-              <p><Phone /> +504 2222-2222</p>
-              <p><Mail /> info@institutovalencia.edu.hn</p>
+            <div className="space-y-5 text-gray-300">
+              <p className="flex items-center gap-2"><MapPinned strokeWidth={2} size={23}/> Col. Palmira, Tegucigalpa, Honduras</p>
+              <p className="flex items-center gap-2"><Phone strokeWidth={2} size={23}/> +504 2222-2222</p>
+              <p className="flex items-center gap-2"><Mail strokeWidth={2} size={23}/> info@institutovalencia.edu.hn</p>
             </div>
           </div>
 

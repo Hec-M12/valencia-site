@@ -4,7 +4,7 @@ import Hero from "./custom-components/Hero"
 import Sedes from "./custom-components/SedesSection"
 import SistemasEducativos from "./custom-components/SistemasEducativosSection"
 import ContactanosSection from "./custom-components/ContactanosSection"
-import Footer from "./custom-components/Footer/Footer"
+import Footer from "./custom-components/Footer"
 
 export default function InstitutoValencia() {
   return (
