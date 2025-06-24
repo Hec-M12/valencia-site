@@ -4,10 +4,10 @@ import SistemaEducativoCard from "./SistemaEducativoCard"
 
 export default function SistemasEducativos(){
   return(
-    <section className="py-20 bg-instituto-gray">
+    <section className="py-20 bg-valencia-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-instituto-blue mb-4">Dos sistemas, una misma excelencia</h2>
+            <h2 className="text-4xl font-bold font-heading text-valencia-blue mb-4">Dos sistemas, una misma excelencia</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Ofrecemos dos modalidades educativas para adaptarnos a las necesidades y aspiraciones de cada familia.
             </p>
@@ -31,7 +31,7 @@ export default function SistemasEducativos(){
                   <div className="p-3 bg-blue-100 rounded-full mr-4">
                     <Globe className="text-blue-600" size={32} />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-instituto-blue">Sistema Anglosajón</CardTitle>
+                  <CardTitle className="text-2xl font-bold font-heading text-valencia-blue">Sistema Anglosajón</CardTitle>
                 </div>
                 <CardDescription className="text-lg text-gray-600">
                   Educación bilingüe con estándares internacionales

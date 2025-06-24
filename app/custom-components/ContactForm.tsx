@@ -86,7 +86,7 @@ export default function ContactForm({ onSubmit }: ContactFormProps) {
 
       <Button 
         type="submit"
-        className="w-full bg-instituto-blue hover:bg-instituto-blue/90 text-white py-3 text-lg font-semibold"
+        className="w-full bg-valencia-light-blue hover:bg-valencia-light-blue/90 text-white py-3 text-lg font-semibold"
       >
         Enviar consulta
       </Button>

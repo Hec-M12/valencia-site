@@ -19,7 +19,7 @@ export default function ContactButton({
   const baseClasses = "w-full py-4 text-lg font-semibold flex items-center justify-center space-x-3"
   const variantClasses = variant === "default" 
     ? "bg-green-600 hover:bg-green-700 text-white" 
-    : "border-instituto-blue text-instituto-blue hover:bg-instituto-blue hover:text-white"
+    : "border-valencia-light-blue text-valencia-light-blue hover:bg-valencia-light-blue hover:text-white"
 
   return (
     <Button

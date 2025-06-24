@@ -1,34 +1,60 @@
-import { Button } from "@/components/ui/button"
-import Image from "next/image"
+import Image from 'next/image';
+import heroImage from '@/public/assets/images/hero/hero-bg.png';
+import Head from 'next/head';
 
 export default function Hero() {
   return (
-    <section id="inicio" className="bg-instituto-gray py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold text-instituto-blue leading-tight">
-                Educando y tranformando generaciones
-              </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                Formamos líderes del mañana a través de una educación bilingüe integral, fundamentada en valores
-                cristianos y excelencia académica.
-              </p>
-              <Button className="bg-instituto-blue hover:bg-instituto-blue/90 text-white px-8 py-3 text-lg font-semibold">
-                Explorar
-              </Button>
-            </div>
-            <div className="relative">
-              <Image
-                src="/placeholder.svg?height=500&width=600"
-                alt="Estudiantes felices del Instituto Valencia"
-                width={600}
-                height={500}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
-          </div>
-        </div>
+    <>
+      <Head>
+        {/* Preload de la imagen */}
+        <link
+          rel="preload"
+          href="/assets/images/hero/hero-bg.jpg"
+          as="image"
+          type="image/webp"
+        />
+      </Head>
+      <section id="inicio" 
+        className="
+          relative h-[60vh] 
+          md:h-[75vh] 
+          lg:h-[85vh] lg:w-[101vw]
+          flex 
+          items-center 
+          justify-center
+      ">
+        {/* Fondo optimizado */}
+         <Image
+           src={heroImage}
+           alt="Hero image"
+           fill
+           priority
+           quality={75}
+           placeholder="blur"
+           sizes="100vw"
+           loading="eager"
+           className="object-cover"
+           style={{objectPosition: '60% 35%'}}
+         />  
+        {/* Overlay legibilidad */}
+        <div className="absolute inset-0 bg-white bg-opacity-30" />
+
+        {/* Texto */}
+          <h1
+            className="
+              relative z-10
+              text-white text-center
+              font-bold
+              text-4xl md:text-6xl
+              drop-shadow-lg
+              px-4
+              lg:-translate-x-1
+              transform
+            "
+          >
+            Educando y transformando generaciones
+          </h1>
       </section>
-  )
+    </>
+  );
 }

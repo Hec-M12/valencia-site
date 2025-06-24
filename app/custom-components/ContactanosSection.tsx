@@ -22,7 +22,7 @@ export default function ContactanosSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Botones de contacto rápido */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-instituto-blue mb-6">Contacto directo</h3>
+            <h3 className="text-2xl font-bold font-heading text-valencia-blue mb-6">Contacto directo</h3>
 
             <div className="space-y-4">
               <ContactButton
@@ -44,8 +44,8 @@ export default function ContactanosSection() {
           </div>
 
           {/* Formulario */}
-          <div className="bg-instituto-gray p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-instituto-blue mb-6">Envíanos tu consulta</h3>
+          <div className="bg-valencia-gray p-8 rounded-lg">
+            <h3 className="text-2xl font-bold font-heading text-valencia-blue mb-6">Envíanos tu consulta</h3>
             <ContactForm onSubmit={handleFormSubmit} />
           </div>
         </div>

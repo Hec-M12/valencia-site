@@ -8,7 +8,7 @@ import Footer from "./custom-components/Footer"
 
 export default function InstitutoValencia() {
   return (
-    <div className="min-h-screen bg-white font-sans">
+    <div className="min-h-screen bg-white font-body">
       <Navbar />
       <Hero />
       <Sedes />

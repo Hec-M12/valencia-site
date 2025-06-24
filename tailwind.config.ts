@@ -20,27 +20,15 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        sans: [
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          '"Segoe UI"',
-          "Roboto",
-          '"Helvetica Neue"',
-          "Arial",
-          '"Noto Sans"',
-          "sans-serif",
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
-        montserrat: ["Montserrat", "sans-serif"],
+        heading: ['Faustina', 'serif'],
+        body: ['Quicksand', 'sans-serif'],
       },
       colors: {
-        "instituto-blue": "#132c51",
-        "instituto-yellow": "#f2c230",
-        "instituto-gray": "#f6f6f6",
+        "valencia-blue": "#216B8D",          // color institucional principal (header, títulos fuertes)
+        "valencia-light-blue": "#32A5D1",    // botones principales, detalles importantes
+        "valencia-gray": "#f6f6f6",          // fondo de secciones suaves
+        "valencia-dark-gray": "#4B4B4B",     // texto fuerte, hover, botones secundarios
+        "valencia-green": "#4CAF50",         // CTA (call to action) de inscripción → botón bien visible
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

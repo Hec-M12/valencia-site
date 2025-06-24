@@ -12,10 +12,10 @@ export default function SedeCard({ nombre, descripcion, ubicacion }: Props){
   return(
   <Card className="hover:shadow-lg transition-shadow duration-300">
                 <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-3 bg-instituto-blue/10 rounded-full w-16 h-16 flex items-center justify-center">
-                    <MapPin className="text-instituto-blue" size={32} />
+                  <div className="mx-auto mb-4 p-3 bg-valencia-light-blue/10 rounded-full w-16 h-16 flex items-center justify-center">
+                    <MapPin className="text-valencia-blue" size={32} />
                   </div>
-                  <CardTitle className="text-xl font-bold text-instituto-blue">{nombre}</CardTitle>
+                  <CardTitle className="text-xl font-bold font-heading text-valencia-blue">{nombre}</CardTitle>
                   <CardDescription className="text-gray-600">
                     {descripcion}
                   </CardDescription>
@@ -24,7 +24,7 @@ export default function SedeCard({ nombre, descripcion, ubicacion }: Props){
                   <p className="text-gray-600 mb-4">{ubicacion}</p>
                   <Button
                     variant="outline"
-                    className="border-instituto-blue text-instituto-blue hover:bg-instituto-blue hover:text-white"
+                    className="border-valencia-light-blue text-valencia-light-blue hover:bg-valencia-light-blue hover:text-white"
                   >
                     Ver más
                   </Button>

@@ -18,7 +18,7 @@ export default function SistemaEducativoCard({nombre, descripcion, icono, bullet
                   <div className="p-3 bg-green-100 rounded-full mr-4">
                     {icono}
                   </div>
-                  <CardTitle className="text-2xl font-bold text-instituto-blue">{nombre}</CardTitle>
+                  <CardTitle className="text-2xl font-bold font-heading text-valencia-blue">{nombre}</CardTitle>
                 </div>
                 <CardDescription className="text-lg text-gray-600">
                   {descripcion}
