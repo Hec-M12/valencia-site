@@ -20,8 +20,15 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        heading: ['Faustina', 'serif'],
+        heading: ['Roboto', 'sans-serif'],
         body: ['Quicksand', 'sans-serif'],
+        urbanist: ['Urbanist', 'sans-serif'],
+      },
+      fontSize: {
+        // nombre de la clase: [ tamaño, { lineHeight, letterSpacing, fontWeight } ]
+        heading:    ['2.5rem',  { lineHeight: '1.2', fontWeight: '700' }],  // text-heading → 40px
+        subtitle:   ['1.875rem',{ lineHeight: '1.3', fontWeight: '600' }],  // text-subtitle → 30px
+        body:       ['1rem',    { lineHeight: '1.6', fontWeight: '400' }],  // text-body → 16px
       },
       colors: {
         "valencia-blue": "#216B8D",          // color institucional principal (header, títulos fuertes)

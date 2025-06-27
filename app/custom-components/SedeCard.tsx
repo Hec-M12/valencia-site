@@ -16,7 +16,7 @@ export default function SedeCard({ nombre, descripcion, ubicacion }: Props){
                     <MapPin className="text-valencia-blue" size={32} />
                   </div>
                   <CardTitle className="text-xl font-bold font-heading text-valencia-blue">{nombre}</CardTitle>
-                  <CardDescription className="text-gray-600">
+                  <CardDescription className="text-gray-600 font-body">
                     {descripcion}
                   </CardDescription>
                 </CardHeader>
