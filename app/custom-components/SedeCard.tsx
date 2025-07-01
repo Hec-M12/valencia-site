@@ -1,43 +1,38 @@
-// app/custom-components/SedeCard.tsx
-'use client'
-import { MapContainer, TileLayer, Marker } from 'react-leaflet';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
-import markerIconPng from 'leaflet/dist/images/marker-icon.png';
+"use client";
 
 interface SedeCardProps {
   name: string;
   address: string;
   lat: number;
   lng: number;
+  googleMapsUrl?: string;
 }
 
-export default function SedeCard({ name, address, lat, lng }: SedeCardProps) {
-  const markerIcon = new L.Icon({
-    iconUrl: markerIconPng.src,
-    iconSize: [24, 36],
-    iconAnchor: [12, 36],
-  });
-
+export default function SedeCard({ name, address, lat, lng, googleMapsUrl }: SedeCardProps) {
   return (
-    <div className="bg-white/70 rounded-lg shadow-lg overflow-hidden">
-      <div className="p-6">
+    <div className="bg-stone-100 rounded-lg shadow-lg overflow-hidden border border-gray-250 hover:shadow-2xl transition-shadow duration-300">
+      <div className="p-8">
         <h4 className="text-xl font-semibold text-center text-valencia-blue mb-2">{name}</h4>
         <p className="text-gray-600 text-center mb-4">{address}</p>
-        {/* Mapa */}
-        <MapContainer
-          center={[lat, lng]}
-          zoom={16}
-          scrollWheelZoom={false}
-          className="w-full h-48 rounded-md"
-        >
-          <TileLayer
-            // OpenStreetMap estándar; puedes cambiar por Mapbox o Stamen
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution="&copy; OpenStreetMap contributors"
+        <div className="w-full h-80 rounded-md overflow-hidden">
+          <iframe
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            src={`https://www.openstreetmap.org/export/embed.html?bbox=${lng - 0.001},${lat - 0.001},${lng + 0.001},${lat + 0.001}&layer=mapnik&marker=${lat},${lng}`}
+            allowFullScreen
           />
-          <Marker position={[lat, lng]} icon={markerIcon} />
-        </MapContainer>
+        </div>
+        <div className="mt-2 text-center">
+          <a
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-valencia-blue nav-link hover:font-semibold"
+          >
+            Ver en Google Maps
+          </a>
+        </div>
       </div>
     </div>
   );
