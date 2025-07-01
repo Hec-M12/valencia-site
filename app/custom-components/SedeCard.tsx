@@ -1,34 +1,44 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { MapPin } from "lucide-react"
+// app/custom-components/SedeCard.tsx
+'use client'
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import markerIconPng from 'leaflet/dist/images/marker-icon.png';
 
-interface Props {
-  nombre: string;
-  descripcion: string;
-  ubicacion: string;
+interface SedeCardProps {
+  name: string;
+  address: string;
+  lat: number;
+  lng: number;
 }
 
-export default function SedeCard({ nombre, descripcion, ubicacion }: Props){
-  return(
-  <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="text-center">
-                  <div className="mx-auto mb-4 p-3 bg-valencia-light-blue/10 rounded-full w-16 h-16 flex items-center justify-center">
-                    <MapPin className="text-valencia-blue" size={32} />
-                  </div>
-                  <CardTitle className="text-xl font-bold font-heading text-valencia-blue">{nombre}</CardTitle>
-                  <CardDescription className="text-gray-600 font-body">
-                    {descripcion}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-gray-600 mb-4">{ubicacion}</p>
-                  <Button
-                    variant="outline"
-                    className="border-valencia-light-blue text-valencia-light-blue hover:bg-valencia-light-blue hover:text-white"
-                  >
-                    Ver más
-                  </Button>
-                </CardContent>
-              </Card>
-  )
+export default function SedeCard({ name, address, lat, lng }: SedeCardProps) {
+  const markerIcon = new L.Icon({
+    iconUrl: markerIconPng.src,
+    iconSize: [24, 36],
+    iconAnchor: [12, 36],
+  });
+
+  return (
+    <div className="bg-white/70 rounded-lg shadow-lg overflow-hidden">
+      <div className="p-6">
+        <h4 className="text-xl font-semibold text-center text-valencia-blue mb-2">{name}</h4>
+        <p className="text-gray-600 text-center mb-4">{address}</p>
+        {/* Mapa */}
+        <MapContainer
+          center={[lat, lng]}
+          zoom={16}
+          scrollWheelZoom={false}
+          className="w-full h-48 rounded-md"
+        >
+          <TileLayer
+            // OpenStreetMap estándar; puedes cambiar por Mapbox o Stamen
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution="&copy; OpenStreetMap contributors"
+          />
+          <Marker position={[lat, lng]} icon={markerIcon} />
+        </MapContainer>
+      </div>
+    </div>
+  );
 }

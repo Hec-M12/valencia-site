@@ -15,7 +15,7 @@ export default function Hero() {
         />
       </Head>
       <section id="inicio" 
-        className="relative w-screen h-[50vh] md:h-[60vh] lg:h-[85vh] overflow-hidden flex items-center justify-center"
+        className="relative max-w-full overflow-x-hidden h-[50vh] md:h-[60vh] lg:h-[85vh] flex items-center justify-center"
       >
         {/* Fondo optimizado como background en lg+ */}
         <Image
@@ -33,7 +33,7 @@ export default function Hero() {
         <h1
           className="
             absolute top-8 right-0 md:top-8 lg:relative lg:top-auto lg:right-auto
-            w-[65%] md:w-[55%] lg:w-[40%]
+            max-w-full w-[55%] md:w-[40%] lg:w-[40%]
             text-valencia-blue text-right
             tracking-tight
             text-shadow
@@ -43,18 +43,19 @@ export default function Hero() {
             drop-shadow-lg
             font-urbanist
             px-4
-            [@media(min-width:1020px)_and_(max-width:1250px)_and_(min-height:700px)]:translate-x-[65%]
+            [@media(min-width:1020px)_and_(max-width:1250px)_and_(min-height:700px)]:translate-x-[60%]
             [@media(min-width:1020px)_and_(max-width:1250px)_and_(min-height:700px)]:-translate-y-[100%]
-            transform lg:translate-x-[65%] lg:-translate-y-[55%]
-            md:leading-[1.2] md:translate-x-[-10%]
+            transform lg:translate-x-[60%] lg:-translate-y-[55%]
+            md:leading-[1.2] md:translate-x-[-15%]
             lg:leading-[1.35]
+            overflow-x-hidden
           "
         >
           Educando y Transformando Generaciones
         </h1>
 
         {/* Imagen en la parte inferior para sm y md */}
-        <div className="block lg:hidden absolute bottom-0 left-0 w-full h-full z-0">
+        <div className="block lg:hidden absolute bottom-0 left-0 w-full h-full z-0 overflow-x-hidden">
           <Image
             src={heroImage}
             alt="Hero image"
