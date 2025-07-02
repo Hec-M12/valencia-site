@@ -1,6 +1,6 @@
 "use client"
 
-import { MessageCircle, Phone, Mail } from "lucide-react"
+import { MessageCircle, Mail } from "lucide-react"
 import ContactButton from "./ContactButton"
 import ContactForm from "./ContactForm"
 import SectionTitle from "./SectionTitle"
@@ -29,11 +29,6 @@ export default function ContactanosSection() {
                 icon={MessageCircle}
                 text="WhatsApp: +504 9999-9999"
                 variant="default"
-              />
-
-              <ContactButton
-                icon={Phone}
-                text="Teléfono: +504 2222-2222"
               />
 
               <ContactButton

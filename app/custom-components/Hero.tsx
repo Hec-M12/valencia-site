@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import heroImage from '@/public/assets/images/hero/hero-transparent-bg.png';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
@@ -30,7 +31,12 @@ export default function Hero() {
         />    
 
         {/* Texto centrado sobre la imagen */}
-        <h1
+        <motion.h1
+          initial={{ opacity: 0 }}
+					whileInView="visible"
+          animate={{ opacity: 1}}
+          viewport={{ once: false, amount: 1 }}
+          transition={{ duration: 1 }}
           className="
             absolute top-8 right-0 md:top-8 lg:relative lg:top-auto lg:right-auto
             max-w-full w-[55%] md:w-[40%] lg:w-[40%]
@@ -52,7 +58,7 @@ export default function Hero() {
           "
         >
           Educando y Transformando Generaciones
-        </h1>
+        </motion.h1>
 
         {/* Imagen en la parte inferior para sm y md */}
         <div className="block lg:hidden absolute bottom-0 left-0 w-full h-full z-0 overflow-x-hidden">

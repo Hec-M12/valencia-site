@@ -42,25 +42,30 @@ export default function KeyValuesSection() {
 					<motion.h2
 					  className="absolute inset-8 text-6xl md:text-8xl font-bold text-valencia-light-blue/25 uppercase leading-none"
 					  variants={headingVariants}
-					  initial="hidden"
-					  whileInView="visible"
-					  viewport={{ once: true, amount: 0.3 }}
+					  initial={{ opacity: 0}}
+					  whileInView={{ opacity: 1}}
+            transition={{ duration: 1 }}
+					  viewport={{ once: true, amount: 1 }}
 					>
 						Valores
 					</motion.h2>
 					<motion.h3
 					  className="relative text-2xl md:text-4xl font-semibold text-valencia-blue/80"
 					  variants={headingVariants}
-					  initial="hidden"
-					  whileInView="visible"
-					  viewport={{ once: true, amount: 0.3 }}
+					  initial={{ opacity: 0 }}
+					  whileInView={{ opacity: 1 }}
+					  viewport={{ once: true, amount: 1 }}
 					>
 						Nuestros
 					</motion.h3>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-8 pt-6 md:pt-14">
 					{valores.map(({ icon, title, subtitle }) => (
-						<div
+						<motion.div
+              initial={{ scaleX: 0, scaleY: 0 }}
+              whileInView={{ scaleX: 1, scaleY: 1 }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
+              viewport={{ once: true, amount: 0.2 }}
 							key={title}
 							className="w-[75vw] mx-auto md:w-full flex flex-col items-center text-center bg-valencia-light-blue rounded-lg p-6"
 						>
@@ -73,7 +78,7 @@ export default function KeyValuesSection() {
 								{title}
 							</h3>
 							<p className="text-gray-200">{subtitle}</p>
-						</div>
+						</motion.div>
 					))}
 				</div>
 			</div>
