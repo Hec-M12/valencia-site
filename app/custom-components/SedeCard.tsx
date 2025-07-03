@@ -26,7 +26,7 @@ export default function SedeCard({ name, address, href }: SedeCardProps) {
         <div className="flex justify-center">
           <a
             href={href}
-            className="w-[40%] bg-valencia-blue text-white py-2 rounded hover:bg-valencia-blue/70 transition-colors duration-300 text-center block"
+            className="w-[40%] bg-valencia-blue font-semibold text-white py-2 rounded hover:bg-valencia-blue/70 transition-colors duration-300 text-center block"
           >
             Conocer más
           </a>
