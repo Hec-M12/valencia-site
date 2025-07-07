@@ -2,9 +2,9 @@
 import Navbar from "./custom-components/Navbar"
 import Hero from "./custom-components/Hero"
 import Sedes from "./custom-components/SedesSection"
-import ContactanosSection from "./custom-components/ContactanosSection"
 import Footer from "./custom-components/Footer"
 import KeyValuesSection from "./custom-components/KeyValuesSection"
+import VideoSection from "./custom-components/VideoSection"
 
 export default function InstitutoValencia() {
   return (
@@ -13,7 +13,7 @@ export default function InstitutoValencia() {
       <Hero />
       <KeyValuesSection />
       <Sedes />
-      <ContactanosSection />
+      <VideoSection />
       <Footer />
     </div>
   )
