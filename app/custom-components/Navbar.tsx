@@ -17,7 +17,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Image
-              src="/assets/images/logos/valencia-logo.png?height=60&width=160"
+              src="/images/logos/valencia-logo.png?height=60&width=160"
               alt="Instituto Valencia Logo"
               width={160}
               height={80}

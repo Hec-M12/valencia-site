@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import heroImage from '@/public/assets/images/hero/hero-transparent-bg.png';
+import heroImage from '@/public/images/hero/hero-transparent-bg.png';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
@@ -16,7 +16,7 @@ export default function Hero() {
         />
       </Head>
       <section id="inicio" 
-        className="relative max-w-full overflow-x-hidden h-[50vh] md:h-[60vh] lg:h-[85vh] flex items-center justify-center"
+        className="relative max-w-full overflow-x-hidden h-[50vh] md:h-[60vh] lg:h-[85vh] flex items-center justify-center border-b-4 border-valencia-blue"
       >
         {/* Fondo optimizado como background en lg+ */}
         <Image

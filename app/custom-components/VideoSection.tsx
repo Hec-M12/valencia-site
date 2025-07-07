@@ -9,7 +9,7 @@ export default function VideoSection() {
         <div className="flex justify-center items-center h-full">
           <VideoPlayer
             videoId="bqj3_1ISiW4"
-            coverSrc="/assets/images/logos/valencia-logo.png"
+            coverSrc="/images/logos/valencia-logo.png"
             coverAlt="Logo Valencia School"
           />
         </div>

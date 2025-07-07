@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Logo y descripción */}
           <div className="space-y-4">
             <Image
-              src="/assets/images/logos/valencia-logo.png"
+              src="/images/logos/valencia-logo.png"
               alt="Instituto Valencia Logo"
               width={120}
               height={40}
