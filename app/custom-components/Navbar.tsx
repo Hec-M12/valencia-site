@@ -34,6 +34,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
+                  text-valencia-blue
                   ${pathname === "/" ? "font-bold text-valencia-blue" : ""}
                 `}
               >
@@ -45,6 +46,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
+                  text-valencia-blue
                   ${
                     pathname === "/nosotros"
                       ? "font-bold text-valencia-blue"
@@ -60,6 +62,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
+                  text-valencia-blue
                   ${
                     pathname === "/ubicaciones"
                       ? "font-bold text-valencia-blue"
@@ -75,6 +78,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
+                  text-valencia-blue
                   ${
                     pathname === "/contacto"
                       ? "font-bold text-valencia-blue"
@@ -104,7 +108,7 @@ export default function Navbar() {
             <div className="px-2 pt-3 pb-1 space-y-1 sm:px-3 bg-white text-valencia-blue">
               <a
                 href="#inicio"
-                className={`"font-semibold block px-3 py-2 hover:text-valencia-yellow transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
+                className={`"font-semibold block px-3 py-2 transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
                   pathname === "/" ? "font-bold text-valencia-blue" : ""
                 }`}
               >
@@ -112,7 +116,7 @@ export default function Navbar() {
               </a>
               <a
                 href="#nosotros"
-                className={`"font-semibold block px-3 py-2 hover:text-valencia-yellow transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
+                className={`"font-semibold block px-3 py-2 transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
                   pathname === "/nosotros" ? "font-bold text-valencia-blue" : ""
                 }`}
               >
@@ -120,7 +124,7 @@ export default function Navbar() {
               </a>
               <a
                 href="#ubicaciones"
-                className={`"font-semibold block px-3 py-2 hover:text-valencia-yellow transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
+                className={`"font-semibold block px-3 py-2 transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
                   pathname === "/ubicaciones"
                     ? "font-bold text-valencia-blue"
                     : ""
@@ -130,7 +134,7 @@ export default function Navbar() {
               </a>
               <a
                 href="#contacto"
-                className={`"font-semibold block px-3 py-2 hover:text-valencia-yellow transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
+                className={`"font-semibold block px-3 py-2 transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
                   pathname === "/contacto" ? "font-bold text-valencia-blue" : ""
                 }`}
               >

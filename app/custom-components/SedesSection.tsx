@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 export default function Sedes(){
   return(
-    <section id="ubicaciones" className="pb-12 
+    <section id="ubicaciones" className="md:py-20 lg:py-20 pb-20
     bg-[linear-gradient(to_top,_white_0%,_white_40%,_theme(colors.blue-gradient)_98%)] lg:mx-auto transform translate-y-[-1px]
     md:bg-[linear-gradient(to_top,_white_0%,_white_40%,_theme(colors.blue-gradient)_98%)] lg:mx-auto transform translate-y-[-1px]
     lg:bg-[linear-gradient(to_top,_white_0%,_white_40%,_theme(colors.blue-gradient)_98%)] lg:mx-auto transform translate-y-[-1px]

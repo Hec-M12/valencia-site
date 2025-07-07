@@ -32,7 +32,7 @@ const valores = [
 
 export default function KeyValuesSection() {
 	return (
-		<section className="py-12 pb-24
+		<section className="py-20 md:pt-32 lg:pt-32
     bg-[linear-gradient(to_bottom,_white_75%,_theme(colors.blue-gradient)_100%)]
     md:bg-[linear-gradient(to_bottom,_white_60%,_theme(colors.blue-gradient)_98%)] 
     lg:bg-[linear-gradient(to_bottom,_white_60%,_theme(colors.blue-gradient)_98%)]
