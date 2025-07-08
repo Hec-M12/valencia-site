@@ -3,7 +3,6 @@ import "leaflet/dist/leaflet.css"
 import "leaflet/dist/images/marker-icon.png"
 import "leaflet/dist/images/marker-shadow.png"  
 import SedeCard from "./SedeCard"
-import { motion } from "framer-motion"
 
 export default function Sedes(){
   return(
@@ -14,11 +13,11 @@ export default function Sedes(){
     ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <motion.h2 initial={{ opacity: 0}} whileInView={{ opacity: 1}} transition={{ duration: 0.6 }} viewport={{ once: true, amount: 0.2 }} className="text-3xl font-body font-semibold font-weight-400 text-white drop-shadow-md mb-4 ">Siempre cerca de ti</motion.h2>
-            <motion.p initial={{ opacity: 0}} whileInView={{ opacity: 1}} transition={{ duration: 0.6 }} viewport={{ once: true, amount: 0.2 }} className="text-xl text-white max-w-3xl mx-auto drop-shadow-md font-semibold">
+            <h2 className="text-3xl font-body font-semibold font-weight-400 text-white drop-shadow-md mb-4 ">Siempre cerca de ti</h2>
+            <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-md font-semibold">
               Contamos con dos sedes estratégicamente ubicadas para brindar educación de calidad en diferentes zonas de
               la ciudad.
-            </motion.p>
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

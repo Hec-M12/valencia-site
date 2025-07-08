@@ -1,5 +1,5 @@
 "use client"
-
+import { motion } from "framer-motion"
 import { Mail, Phone, MessageCircle, Target } from "lucide-react"
 
 export default function ContactanosSection() {
@@ -16,7 +16,11 @@ export default function ContactanosSection() {
             { Icon: Phone, label: "Teléfono", value: "+504 9999-9999", href: "tel:+50499999999" },
             { Icon: MessageCircle, label: "WhatsApp", value: "+504 9999-9999", href: "https://wa.me/50499999999", target: "_blank" }
           ].map(({ Icon, label, value, href, target }) => (
-            <a
+            <motion.a
+              initial={{ opacity: 0}}
+              whileInView={{ opacity: 1}}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              viewport={{ once: true, amount: 0.2 }}
               key={label}
               href={href}
               target={target}
@@ -27,7 +31,7 @@ export default function ContactanosSection() {
                 <p className="text-md md:text-md text-gray-500 group-hover:text-white">{label}</p>
                 <p className="text-sm md:text-md font-semibold text-gray-800 break-all group-hover:text-white">{value}</p>
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>

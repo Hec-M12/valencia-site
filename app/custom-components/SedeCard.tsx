@@ -10,9 +10,9 @@ interface SedeCardProps {
 export default function SedeCard({ name, address, href }: SedeCardProps) {
   return (
     <motion.div
-      initial={{ scaleX: 0, scaleY: 0 }}
-      whileInView={{ scaleX: 1, scaleY: 1 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
       viewport={{ once: true, amount: 0.2 }}
       className="bg-stone-100 rounded-lg shadow-lg overflow-hidden border border-gray-250 hover:shadow-2xl transition-shadow duration-300"
     >

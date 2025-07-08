@@ -16,7 +16,7 @@ export default function Hero() {
         />
       </Head>
       <section id="inicio" 
-        className="relative max-w-full overflow-x-hidden h-[50vh] md:h-[60vh] lg:h-[85vh] flex items-center justify-center border-b-4 border-valencia-blue"
+        className="relative max-w-full overflow-x-hidden h-[50vh] md:h-[60vh] lg:h-[85vh] flex items-center justify-center shadow-2xl"
       >
         {/* Fondo optimizado como background en lg+ */}
         <Image

@@ -39,32 +39,23 @@ export default function KeyValuesSection() {
     md:h-[100] lg:mx-auto">
 			<div className="max-w-5xl mx-auto px-6 lg:max-w-6xl">
 				<div className="relative text-center mb-24 sm:mb-20">
-					<motion.h2
+					<h2
 					  className="absolute inset-8 text-6xl md:text-8xl font-bold text-valencia-light-blue/25 uppercase leading-none"
-					  variants={headingVariants}
-					  initial={{ opacity: 0}}
-					  whileInView={{ opacity: 1}}
-            transition={{ duration: 1 }}
-					  viewport={{ once: true, amount: 1 }}
 					>
 						Valores
-					</motion.h2>
-					<motion.h3
+					</h2>
+					<h3
 					  className="relative text-2xl md:text-4xl font-semibold text-valencia-blue/80"
-					  variants={headingVariants}
-					  initial={{ opacity: 0 }}
-					  whileInView={{ opacity: 1 }}
-					  viewport={{ once: true, amount: 1 }}
 					>
 						Nuestros
-					</motion.h3>
+					</h3>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-8 pt-6 md:pt-14">
 					{valores.map(({ icon, title, subtitle }) => (
 						<motion.div
-              initial={{ scaleX: 0, scaleY: 0 }}
-              whileInView={{ scaleX: 1, scaleY: 1 }}
-              transition={{ duration: 0.4, ease: 'easeInOut' }}
+              initial={{ opacity: 0}}
+              whileInView={{ opacity: 1}}
+              transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.2 }}
 							key={title}
 							className="w-[75vw] mx-auto md:w-full flex flex-col items-center text-center bg-valencia-light-blue rounded-lg p-6"
