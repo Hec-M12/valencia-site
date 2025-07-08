@@ -49,6 +49,26 @@
   }
 }
 
+/* color blanco en mobile (por defecto) */
+.vertical-timeline-element-date {
+  color: #fff !important;
+}
+
+.vertical-timeline-element{
+  &:hover {
+    scale:1.05;
+    transition: all 0.3s ease-in-out;
+}
+}
+
+/* a partir de lg (1024px) ponlo negro */
+@media (min-width: 1170px) {
+  .vertical-timeline-element-date {
+    color: #000 !important;
+  }
+}
+
+
 @layer base {
   * {
     @apply border-border;
