@@ -3,8 +3,8 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Instituto Valencia - Educación Bilingüe de Calidad",
-  description: "Institución educativa bilingüe en Honduras con formación en valores cristianos",
+  title: "Valencia School",
+  description: "Institución bilingüe con calendario nacional y anglosajón. Educación integral en Residencial Valencia y Los Hidalgos.",
   icons: {
     icon: "/images/icons/favicon.ico",
     shortcut: "/images/icons/favicon.ico",
