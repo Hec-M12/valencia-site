@@ -76,7 +76,7 @@ export default function Timeline() {
         <h2 className="text-3xl md:text-4xl font-bold text-valencia-blue">
           Nuestra Trayectoria
         </h2>
-        <p className="mt-2 text-gray-600 pb-4">
+        <p className="mt-2 text-gray-600 pb-4 mb-4">
           Más de 35 años de hitos y crecimiento formando líderes críticos y creativos
         </p>
       </div>
