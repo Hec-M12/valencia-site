@@ -7,6 +7,41 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
+const menuVariants = {
+  open: {
+    height: "auto",
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.01,
+      duration: 0.25,
+    }
+  },
+  closed: {
+    height: 0,
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+      staggerChildren: 0.01,
+      staggerDirection: -1,
+      duration: 0.25,
+    }
+  }
+};
+
+const textVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.1, ease: "easeInOut" }
+  },
+  closed: {
+    opacity: 0,
+    y: 20,
+    transition: { duration: 0.1, ease: "easeInOut"}
+  }
+};
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -141,12 +176,12 @@ export default function Navbar() {
             <motion.div
               key="mobile-menu"
               className="md:hidden"
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={menuVariants}
             >
-              <div className="px-2 pt-3 pb-1 space-y-1 sm:px-3 bg-white text-valencia-blue">
+              <motion.div variants={textVariants} className="px-2 pt-3 pb-1 space-y-1 sm:px-3 bg-white text-valencia-blue">
                 <Link
                   href="/"
                   className={`
@@ -219,7 +254,7 @@ export default function Navbar() {
                 >
                   Contacto
                 </Link>
-              </div>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
