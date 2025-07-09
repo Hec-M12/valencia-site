@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,21 +57,53 @@ export default function Navbar() {
               >
                 Nosotros
               </Link>
-              {/* Ubicaciones */}
+              {/* Sede Principal */}
               <Link
-                href="/ubicaciones"
+                href="/sede-principal"
                 className={`
                   nav-link
                   hover:font-bold
                   text-valencia-blue
                   ${
-                    pathname === "/ubicaciones"
+                    pathname === "/sede-principal"
                       ? "font-bold text-valencia-blue"
                       : ""
                   }
                 `}
               >
-                Ubicaciones
+                Sede Principal
+              </Link>
+              {/* Sede Sur */}
+              <Link
+                href="/sede-sur"
+                className={`
+                  nav-link
+                  hover:font-bold
+                  text-valencia-blue
+                  ${
+                    pathname === "/sede-sur"
+                      ? "font-bold text-valencia-blue"
+                      : ""
+                  }
+                `}
+              >
+                Sede Sur
+              </Link>
+              {/* Extracurriculares */}
+              <Link
+                href="/extracurriculares"
+                className={`
+                  nav-link
+                  hover:font-bold
+                  text-valencia-blue
+                  ${
+                    pathname === "/extracurriculares"
+                      ? "font-bold text-valencia-blue"
+                      : ""
+                  }
+                `}
+              >
+                Extracurriculares
               </Link>
               {/* Contacto */}
               <Link
@@ -103,46 +136,93 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-3 pb-1 space-y-1 sm:px-3 bg-white text-valencia-blue">
-              <a
-                href="#inicio"
-                className={`"font-semibold block px-3 py-2 transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
-                  pathname === "/" ? "font-bold text-valencia-blue" : ""
-                }`}
-              >
-                Inicio
-              </a>
-              <a
-                href="#nosotros"
-                className={`"font-semibold block px-3 py-2 transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
-                  pathname === "/nosotros" ? "font-bold text-valencia-blue" : ""
-                }`}
-              >
-                Nosotros
-              </a>
-              <a
-                href="#ubicaciones"
-                className={`"font-semibold block px-3 py-2 transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
-                  pathname === "/ubicaciones"
-                    ? "font-bold text-valencia-blue"
-                    : ""
-                }`}
-              >
-                Ubicaciones
-              </a>
-              <a
-                href="#contacto"
-                className={`"font-semibold block px-3 py-2 transition-colors duration-200 border-b-[0.5px] border-valencia-blue" ${
-                  pathname === "/contacto" ? "font-bold text-valencia-blue" : ""
-                }`}
-              >
-                Contacto
-              </a>
-            </div>
-          </div>
-        )}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              key="mobile-menu"
+              className="md:hidden"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              <div className="px-2 pt-3 pb-1 space-y-1 sm:px-3 bg-white text-valencia-blue">
+                <Link
+                  href="/"
+                  className={`
+                    nav-link
+                    hover:font-bold
+                    text-valencia-blue
+                    block px-3 py-2 transition-colors duration-200
+                    ${pathname === "/" ? "font-bold text-valencia-blue" : ""}
+                  `}
+                >
+                  Inicio
+                </Link>
+                <Link
+                  href="/nosotros"
+                  className={`
+                    nav-link
+                    hover:font-bold
+                    text-valencia-blue
+                    block px-3 py-2 transition-colors duration-200
+                    ${pathname === "/nosotros" ? "font-bold text-valencia-blue" : ""}
+                  `}
+                >
+                  Nosotros
+                </Link>
+                <Link
+                  href="/sede-principal"
+                  className={`
+                    nav-link
+                    hover:font-bold
+                    text-valencia-blue
+                    block px-3 py-2 transition-colors duration-200
+                    ${pathname === "/sede-principal" ? "font-bold text-valencia-blue" : ""}
+                  `}
+                >
+                  Sede Principal
+                </Link>
+                <Link
+                  href="/sede-sur"
+                  className={`
+                    nav-link
+                    hover:font-bold
+                    text-valencia-blue
+                    block px-3 py-2 transition-colors duration-200
+                    ${pathname === "/sede-sur" ? "font-bold text-valencia-blue" : ""}
+                  `}
+                >
+                  Sede Sur
+                </Link>
+                <Link
+                  href="/extracurriculares"
+                  className={`
+                    nav-link
+                    hover:font-bold
+                    text-valencia-blue
+                    block px-3 py-2 transition-colors duration-200
+                    ${pathname === "/extracurriculares" ? "font-bold text-valencia-blue" : ""}
+                  `}
+                >
+                  Extracurriculares
+                </Link>
+                <Link
+                  href="/contacto"
+                  className={`
+                    nav-link
+                    hover:font-bold
+                    text-valencia-blue
+                    block px-3 py-2 transition-colors duration-200
+                    ${pathname === "/contacto" ? "font-bold text-valencia-blue" : ""}
+                  `}
+                >
+                  Contacto
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
