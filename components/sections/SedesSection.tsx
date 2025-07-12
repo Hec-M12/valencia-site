@@ -2,7 +2,7 @@ import React from "react"
 import "leaflet/dist/leaflet.css"
 import "leaflet/dist/images/marker-icon.png"
 import "leaflet/dist/images/marker-shadow.png"  
-import SedeCard from "./SedeCard"
+import SedeCard from "@/components/ui/SedeCard"
 
 export default function Sedes(){
   return(

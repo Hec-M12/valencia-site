@@ -1,4 +1,4 @@
-import VideoPlayer from './VideoPlayer'
+import VideoPlayer from '@/components/ui/VideoPlayer'
 import ContactanosSection from './ContactanosSection'
 
 export default function VideoSection() {

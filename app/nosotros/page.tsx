@@ -1,7 +1,7 @@
-import Navbar from "../custom-components/Navbar"
-import Footer from "../custom-components/Footer"
-import Timeline from "../nosotros/Timeline"
-import MisionVisionObjetivo from "../nosotros/MisionVisionObjetivo"
+import Navbar from "@/components/layout/Navbar"
+import Footer from "@/components/layout/Footer"
+import Timeline from "@/components/pages/Timeline"
+import MisionVisionObjetivo from "@/components/pages/MisionVisionObjetivo"
 
 export default function NosotrosPage() { 
   return (
