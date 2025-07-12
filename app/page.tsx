@@ -1,10 +1,10 @@
 "use client"
-import Navbar from "./custom-components/Navbar"
-import Hero from "./custom-components/Hero"
-import Sedes from "./custom-components/SedesSection"
-import Footer from "./custom-components/Footer"
-import KeyValuesSection from "./custom-components/KeyValuesSection"
-import VideoSection from "./custom-components/VideoSection"
+import Navbar from "@/components/layout/Navbar"
+import Hero from "@/components/sections/Hero"
+import Sedes from "@/components/sections/SedesSection"
+import Footer from "@/components/layout/Footer"
+import KeyValuesSection from "@/components/sections/KeyValuesSection"
+import VideoSection from "@/components/sections/VideoSection"
 
 export default function InstitutoValencia() {
   return (

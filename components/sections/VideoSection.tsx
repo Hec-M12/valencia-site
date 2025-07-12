@@ -1,5 +1,5 @@
-import VideoPlayer from './VideoPlayer'
-import ContactanosSection from './ContactanosSection'
+import VideoPlayer from '@/components/shared/VideoPlayer'
+import ContactanosSection from '@/components/sections/ContactanosSection'
 
 export default function VideoSection() {
   return (
