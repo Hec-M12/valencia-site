@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import MapComponent from "./MapComponent";
+import MapComponent from "@/components/shared/MapComponent";
 
 export interface LocationComponentProps {
   address: string;

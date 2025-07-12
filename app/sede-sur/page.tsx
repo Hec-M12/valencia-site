@@ -1,9 +1,9 @@
-import Navbar from "../custom-components/Navbar";
-import Footer from "../custom-components/Footer";
-import SedeHero from "../custom-components/SedeHero";
-import SedeDescription from "../custom-components/SedeDescription";
-import DivisionsComponent from "../custom-components/DivisionsComponent";
-import LocationComponent from "../custom-components/LocationComponent";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import SedeHero from "@/components/sections/SedeHero";
+import SedeDescription from "@/components/shared/SedeDescription";
+import DivisionsComponent from "@/components/shared/DivisionsComponent";
+import LocationComponent from "@/components/shared/LocationComponent";
 
 export default function SedeSur() {
   return (

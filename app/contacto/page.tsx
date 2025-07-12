@@ -1,6 +1,6 @@
-import Navbar from "../custom-components/Navbar";
-import Footer from "../custom-components/Footer";
-import ContactanosSection from "../custom-components/ContactanosSection";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import ContactanosSection from "@/components/sections/ContactanosSection";
 
 export default function Contacto() {
   return (

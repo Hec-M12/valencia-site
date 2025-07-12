@@ -1,6 +1,6 @@
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
 import {Award, Users, Globe, GraduationCap} from "lucide-react"
-import SistemaEducativoCard from "./SistemaEducativoCard"
+import SistemaEducativoCard from "@/components/shared/SistemaEducativoCard"
 
 export default function SistemasEducativos(){
   return(
