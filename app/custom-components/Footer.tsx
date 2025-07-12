@@ -2,7 +2,6 @@
 import React from "react"
 import Image from "next/image"
 import { MapPinned, Phone, Mail } from "lucide-react"
-import { color } from "framer-motion"
 
 export default function Footer() {
   return (
