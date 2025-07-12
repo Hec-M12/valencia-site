@@ -8,7 +8,7 @@ interface SedeHeroProps {
   src: string;
 }
 
-export default function SedeHero({ heading, src}: SedeHeroProps) {
+export default function SedeHero({ heading, src }: SedeHeroProps) {
   return (
     <section
       className="relative bg-white md:flex md:items-center opacity-90"
@@ -16,7 +16,7 @@ export default function SedeHero({ heading, src}: SedeHeroProps) {
         backgroundImage: "url('images/backgrounds/protruding-squares.png')",
         backgroundRepeat: "repeat",
         backgroundPosition: "center",
-        backgroundSize: "75px 75px"
+        backgroundSize: "75px 75px",
       }}
     >
       {/* Icono de fondo con baja opacidad */}
@@ -32,18 +32,13 @@ export default function SedeHero({ heading, src}: SedeHeroProps) {
       </div>
       {/* Contenido */}
       <div className="relative z-10 max-w-4xl mx-auto pt-8 px-6 text-center md:py-32 md:text-left md:mx-0 md:px-10 md:w-1/2">
-        <h1 className="text-6xl md:text-8xl font-urbanist  text-white">
+        <h1 className="text-6xl md:text-8xl font-urbanist text-white">
           {heading}
         </h1>
       </div>
       {/* Owl below title on mobile */}
       <div className="block md:hidden flex justify-center pt-8 pb-4">
-        <Image
-          src={src}
-          alt="Búho Valencia"
-          width={275}
-          height={275}
-        />
+        <Image src={src} alt="Búho Valencia" width={275} height={275} />
       </div>
     </section>
   );

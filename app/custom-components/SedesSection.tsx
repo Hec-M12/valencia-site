@@ -6,15 +6,13 @@ import SedeCard from "./SedeCard"
 
 export default function Sedes(){
   return(
-    <section id="ubicaciones" className="md:py-20 lg:py-20 pb-20
-    bg-[linear-gradient(to_top,_white_0%,_white_40%,_theme(colors.blue-gradient)_98%)] lg:mx-auto transform translate-y-[-1px]
-    md:bg-[linear-gradient(to_top,_white_0%,_white_40%,_theme(colors.blue-gradient)_98%)] lg:mx-auto transform translate-y-[-1px]
-    lg:bg-[linear-gradient(to_top,_white_0%,_white_40%,_theme(colors.blue-gradient)_98%)] lg:mx-auto transform translate-y-[-1px]
+    <section id="ubicaciones" className="md:py-16 lg:py-16 py-16
+    bg-gradient-to-b from-gray-50 to-slate-100 border-t border-b border-gray-200
     ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-body font-semibold font-weight-400 text-white drop-shadow-md mb-4 ">Siempre cerca de ti</h2>
-            <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-md font-semibold">
+            <h2 className="text-3xl font-body font-semibold font-weight-400 text-valencia-blue filter drop-shadow-stone-lg mb-4 ">Siempre cerca de ti</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto filter drop-shadow-lg ">
               Contamos con dos sedes estratégicamente ubicadas para brindar educación de calidad en diferentes zonas de
               la ciudad.
             </p>

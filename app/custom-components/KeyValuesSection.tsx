@@ -32,10 +32,8 @@ const valores = [
 
 export default function KeyValuesSection() {
 	return (
-		<section className="py-20 md:pt-32 lg:pt-32
-    bg-[linear-gradient(to_bottom,_white_75%,_theme(colors.blue-gradient)_100%)]
-    md:bg-[linear-gradient(to_bottom,_white_60%,_theme(colors.blue-gradient)_98%)] 
-    lg:bg-[linear-gradient(to_bottom,_white_60%,_theme(colors.blue-gradient)_98%)]
+		<section className="py-12 md:py-20 lg:py-20
+    bg-white
     md:h-[100] lg:mx-auto">
 			<div className="max-w-5xl mx-auto px-6 lg:max-w-6xl">
 				<div className="relative text-center mb-24 sm:mb-20">
@@ -58,7 +56,7 @@ export default function KeyValuesSection() {
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.2 }}
 							key={title}
-							className="w-[75vw] mx-auto md:w-full flex flex-col items-center text-center bg-valencia-light-blue rounded-lg p-6"
+							className="w-[75vw] mx-auto md:w-full flex flex-col items-center text-center bg-valencia-light-blue rounded-lg p-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
 						>
 							<div className="mb-4">
 								<div className="bg-white/20 rounded-full p-4 inline-flex items-center justify-center">

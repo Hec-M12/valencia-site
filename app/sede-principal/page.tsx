@@ -23,10 +23,10 @@ export default function SedePrincipal() {
         title="Descripción General"
         description="La Sede Principal está ubicada en el Residencial Valencia y es nuestra sede fundacional. Ofrece modalidades bilingüe y español, con un calendario de febrero a noviembre, desde nursery hasta undécimo, e inclusión de francés en el plan de estudios."
         items={[
-          { label: 'Modalidades', value: 'Bilingüe y Español' },
-          { label: 'Calendario', value: 'Febrero - Noviembre' },
-          { label: 'Grados', value: 'Nursery a Undécimo' },
-          { label: 'Idiomas', value: 'Español, Inglés, Francés' },
+          { label: "Modalidades", value: "Bilingüe y Español" },
+          { label: "Calendario", value: "Febrero - Noviembre" },
+          { label: "Grados", value: "Nursery a Undécimo" },
+          { label: "Idiomas", value: "Español, Inglés, Francés" },
         ]}
       />
       <DivisionsComponent />

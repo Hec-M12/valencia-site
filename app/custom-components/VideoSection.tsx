@@ -4,7 +4,7 @@ import ContactanosSection from './ContactanosSection'
 export default function VideoSection() {
   return (
     <section className="bg-gradient-to-b from-white to-blue-50 w-full">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 md:gap-8 lg:gap-8 items-start p-6 pb-24">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 lg:gap-8 items-start p-6 py-16">
         {/* Left: Video */}
         <div className="flex justify-center items-center h-full">
           <VideoPlayer

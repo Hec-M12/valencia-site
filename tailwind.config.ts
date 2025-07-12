@@ -36,7 +36,7 @@ const config: Config = {
         "valencia-gray": "#f6f6f6",          // fondo de secciones suaves
         "valencia-dark-gray": "#4B4B4B",     // texto fuerte, hover, botones secundarios
         "valencia-green": "#4CAF50",         // CTA (call to action) de inscripción → botón bien visible
-        "blue-gradient": "#79d0f2", // degradado azul para fondos
+        "blue-gradient": "#0579A8", // degradado azul para fondos
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

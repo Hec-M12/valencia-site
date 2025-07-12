@@ -10,7 +10,8 @@ export default function SedeSur() {
     <>
       <Navbar />
       <SedeHero
-        heading={<>
+        heading={
+          <>
             <span>Sede</span>
             <br />
             <span>Sur</span>
