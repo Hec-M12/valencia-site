@@ -19,8 +19,8 @@ export default function Sedes(){
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <SedeCard name="Sede Principal" address="Ubicada en Residencial Valencia: la primera sede que dio vida a Valencia School" href="#"/>
-            <SedeCard name="Sede Sur" address="Nuestro moderno campus en Los Hidalgos, inaugurado a principios de 2025" href="#"/>
+            <SedeCard name="Sede Principal" address="Ubicada en Residencial Valencia: la primera sede que dio vida a Valencia School" href="/sede-principal"/>
+            <SedeCard name="Sede Sur" address="Nuestro moderno campus en Los Hidalgos, inaugurado a principios de 2025" href="/sede-sur"/>
           </div>
         </div>
       </section>
