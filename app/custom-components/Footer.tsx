@@ -36,10 +36,12 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-valencia-blue">Enlaces rápidos</h4>
             <div className="space-y-2">
-              <a href="#inicio" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Inicio</a>
-              <a href="#nosotros" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Nosotros</a>
-              <a href="#ubicaciones" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Ubicaciones</a>
-              <a href="#contacto" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Contacto</a>
+              <a href="/" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Inicio</a>
+              <a href="/nosotros" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Nosotros</a>
+              <a href="/sede-principal" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Sede Principal</a>
+              <a href="/sede-sur" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Sede Sur</a>
+              <a href="/extracurriculares" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Extracurriculares</a>
+              <a href="/contacto" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Contacto</a>
             </div>
           </div>
         </div>
