@@ -2,12 +2,14 @@
 
 import React from "react";
 import { Apple, NotebookPen, Globe, FlaskRound } from "lucide-react";
+import Link from "next/link";
 
 interface Division {
   icon: React.ReactNode;
   title: string;
   subtitle: string;
   description: string;
+  url: string;
 }
 
 const divisions: Division[] = [
@@ -17,6 +19,7 @@ const divisions: Division[] = [
     subtitle: "(2-5 años)",
     description:
       "Programa especializado de estimulación temprana, con currículum único y adaptado.",
+    url: "/pre-school"
   },
   {
     icon: <NotebookPen size={48} className="text-valencia-blue" />,
@@ -24,6 +27,7 @@ const divisions: Division[] = [
     subtitle: "(1-5 grados)",
     description:
       "Fundamento académico con aprendizaje activo y laboratorios exclusivos.",
+    url: "/elementary"
   },
   {
     icon: <Globe size={48} className="text-valencia-blue" />,
@@ -31,6 +35,7 @@ const divisions: Division[] = [
     subtitle: "(6-8 grados)",
     description:
       "Preparación global enfocada en proyectos y solución de problemas reales.",
+    url: "/middle-school"
   },
   {
     icon: <FlaskRound size={48} className="text-valencia-blue" />,
@@ -38,6 +43,7 @@ const divisions: Division[] = [
     subtitle: "(9-11 grados)",
     description:
       "Programa riguroso con asesoría universitaria y alto índice de aceptación.",
+    url: "/high-school"
   },
 ];
 
@@ -61,9 +67,11 @@ export default function DivisionsComponent() {
                   {div.description}
                 </p>
                 <div className="flex justify-center">
-                  <button className="cursor-pointer bg-valencia-blue text-white px-4 py-2 rounded hover:bg-valencia-blue/90 transition-colors scale-100 hover:scale-105">
-                    Conoce más
-                  </button>
+                  <Link href={div.url} passHref legacyBehavior>
+                    <button className="cursor-pointer bg-valencia-blue text-white px-4 py-2 rounded hover:bg-valencia-blue/90 transition-colors scale-100 hover:scale-105">
+                      Conoce más
+                    </button>
+                  </Link>
                 </div>
               </div>
             ))}
