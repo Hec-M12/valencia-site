@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import Image from "next/image"
 import {
   Carousel,
@@ -16,12 +16,30 @@ interface ImageSliderProps {
 }
 
 export default function ImageSlider({ images, className = "" }: ImageSliderProps) {
+  const carouselApi = useRef<any>(null)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+
+  useEffect(() => {
+    if (!carouselApi.current) return;
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      if (carouselApi.current) {
+        carouselApi.current.scrollNext();
+      }
+    }, 3000);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [carouselApi.current])
+
   return (
-    <Carousel className={`w-full max-w-4xl mx-auto ${className}`}>
+    <Carousel className={`w-full max-w-4xl mx-auto ${className}`} setApi={api => {
+      carouselApi.current = api;
+    }} opts={{ loop: true }}>
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
-            <div className="relative aspect-video w-full">
+            <div className="relative aspect-video w-[85%] mx-auto">
               <Image
                 src={image}
                 alt={`Imagen ${index + 1}`}
