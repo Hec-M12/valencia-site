@@ -2,11 +2,11 @@
 
 import React from "react"
 import { motion } from "framer-motion"
-import { BookOpen, Users, Clock } from "lucide-react"
 
 interface Subject {
   name: string
   description?: string
+  icon?: React.ReactElement<any>
 }
 
 interface CurriculumSectionProps {
@@ -34,7 +34,8 @@ export default function CurriculumSection({
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">{description}</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Responsive grid: 2 rows, symmetrical, UI friendly */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 place-items-stretch">
           {subjects.map((subject, index) => (
             <motion.div
               key={index}
@@ -42,16 +43,21 @@ export default function CurriculumSection({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="flex flex-col items-center text-center bg-white rounded-[1.5rem] shadow-[0_4px_12px_rgba(0,0,0,0.1)] p-6 w-full max-w-[20rem] cursor-default mx-auto"
             >
-              <div className="flex items-center mb-4">
-                <BookOpen className="w-6 h-6 text-valencia-blue mr-3" />
-                <h3 className="text-xl font-semibold text-valencia-blue">
-                  {subject.name}
-                </h3>
+              <div className="mb-2 flex items-center justify-center">
+                {subject.icon &&
+                  React.cloneElement(subject.icon, {
+                    className: "w-12 h-12 text-valencia-blue",
+                  })}
               </div>
+              <h3 className="font-semibold text-[1.125rem] text-valencia-blue mt-2">
+                {subject.name}
+              </h3>
               {subject.description && (
-                <p className="text-gray-600">{subject.description}</p>
+                <p className="text-[0.875rem] text-gray-600 leading-[1.6] px-2 mt-3">
+                  {subject.description}
+                </p>
               )}
             </motion.div>
           ))}

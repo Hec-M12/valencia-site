@@ -6,36 +6,40 @@ import ExtracurricularSection from "@/components/sections/ExtracurricularSection
 import AdmissionsSection from "@/components/sections/AdmissionsSection"
 import ContactanosSection from "@/components/sections/ContactanosSection"
 import ImageSlider from "@/components/shared/ImageSlider"
+import { FaChild, FaBookOpen, FaPalette, FaLanguage } from "react-icons/fa"
+
+const subjects = [
+  {
+    name: "Desarrollo Integral",
+    description:
+      "Fomentamos el desarrollo físico, emocional y social a través de juegos, arte y actividades que estimulan la curiosidad y la convivencia entre los niños.",
+    icon: <FaChild className="text-pink-400 w-12 h-12" />,
+  },
+  {
+    name: "Lenguaje y Comunicación",
+    description:
+      "Impulsamos habilidades comunicativas en español e inglés, promoviendo la expresión oral y escrita en un ambiente seguro y participativo para todos.",
+    icon: <FaLanguage className="text-blue-400 w-12 h-12" />,
+  },
+  {
+    name: "Matemáticas Iniciales",
+    description:
+      "Introducimos conceptos de números, formas y patrones mediante actividades lúdicas que desarrollan el pensamiento lógico y creativo desde pequeños.",
+    icon: <FaBookOpen className="text-yellow-400 w-12 h-12" />,
+  },
+  {
+    name: "Ciencias y Descubrimiento",
+    description:
+      "Exploramos el entorno natural con experimentos sencillos y proyectos que despiertan la curiosidad y el amor por aprender en cada niño.",
+    icon: <FaPalette className="text-green-400 w-12 h-12" />,
+  },
+]
 
 const curriculumData = {
-  title: "Currículum Preescolar",
-  description: "Nuestro programa preescolar está diseñado para desarrollar las habilidades fundamentales de los niños de 3 a 5 años, fomentando su curiosidad natural y preparándolos para el siguiente nivel educativo.",
-  subjects: [
-    { 
-      name: "Desarrollo del Lenguaje", 
-      description: "Fortalecimiento de habilidades comunicativas en español e inglés" 
-    },
-    { 
-      name: "Matemáticas Tempranas", 
-      description: "Conceptos básicos de números, formas y patrones" 
-    },
-    { 
-      name: "Ciencias Naturales", 
-      description: "Exploración del mundo natural a través de experimentos simples" 
-    },
-    { 
-      name: "Arte y Creatividad", 
-      description: "Expresión artística mediante pintura, dibujo y manualidades" 
-    },
-    { 
-      name: "Educación Física", 
-      description: "Desarrollo motriz y coordinación a través del juego" 
-    },
-    { 
-      name: "Habilidades Sociales", 
-      description: "Trabajo en equipo, respeto y convivencia en grupo" 
-    },
-  ],
+  title: "Preescolar: Descubriendo el Mundo con Curiosidad",
+  description:
+    "Nuestro preescolar integra desarrollo integral, estimulación temprana, bilingüismo y aprendizaje a través del juego. Aquí los niños exploran, se expresan y crecen en un ambiente seguro y estimulante.",
+  subjects,
 }
 
 const sampleImages = [
@@ -65,7 +69,6 @@ export default function Preescolar() {
       />
       <ExtracurricularSection />
       <AdmissionsSection />
-      
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -79,7 +82,6 @@ export default function Preescolar() {
           <ImageSlider images={sampleImages} />
         </div>
       </section>
-
       <ContactanosSection />
       <Footer />
     </>

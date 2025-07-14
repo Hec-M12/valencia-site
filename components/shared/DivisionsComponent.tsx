@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Apple, NotebookPen, Globe, FlaskRound } from "lucide-react";
+import { Apple, NotebookPen, Globe } from "lucide-react";
 import Link from "next/link";
 
 interface Division {
@@ -15,7 +15,7 @@ interface Division {
 const divisions: Division[] = [
   {
     icon: <Apple size={48} className="text-valencia-blue" />,
-    title: "Pre-school",
+    title: "Pre-Escolar",
     subtitle: "(2-5 años)",
     description:
       "Programa especializado de estimulación temprana, con currículum único y adaptado.",
@@ -23,26 +23,18 @@ const divisions: Division[] = [
   },
   {
     icon: <NotebookPen size={48} className="text-valencia-blue" />,
-    title: "Elementary",
-    subtitle: "(1-5 grados)",
+    title: "Primaria",
+    subtitle: "(1-6 grado)",
     description:
       "Fundamento académico con aprendizaje activo y laboratorios exclusivos.",
     url: "/elementary"
   },
   {
     icon: <Globe size={48} className="text-valencia-blue" />,
-    title: "Middle School",
-    subtitle: "(6-8 grados)",
+    title: "Secundaria",
+    subtitle: "(7-11 grados)",
     description:
       "Preparación global enfocada en proyectos y solución de problemas reales.",
-    url: "/middle-school"
-  },
-  {
-    icon: <FlaskRound size={48} className="text-valencia-blue" />,
-    title: "High School",
-    subtitle: "(9-11 grados)",
-    description:
-      "Programa riguroso con asesoría universitaria y alto índice de aceptación.",
     url: "/high-school"
   },
 ];
@@ -51,8 +43,8 @@ export default function DivisionsComponent() {
   return (
     <section className="relative py-16 bg-stone-50 border-y border-gray-300 shadow-sm">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex items-center justify-between">
-          <div className="flex-1 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="flex items-center justify-center">
+          <div className="flex-1 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             {divisions.map((div, i) => (
               <div
                 key={i}
