@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/sevs/:path*",
+      "destination": "https://www.valenciaschoolhn.com/sevs/:path*"
+    }
+  ]
+}

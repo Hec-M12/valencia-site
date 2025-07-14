@@ -124,22 +124,6 @@ export default function Navbar() {
               >
                 Sede Sur
               </Link>
-              {/* Extracurriculares */}
-              <Link
-                href="/extracurriculares"
-                className={`
-                  nav-link
-                  hover:font-bold
-                  text-valencia-blue
-                  ${
-                    pathname === "/extracurriculares"
-                      ? "font-bold text-valencia-blue"
-                      : ""
-                  }
-                `}
-              >
-                Extracurriculares
-              </Link>
               {/* Contacto */}
               <Link
                 href="/contacto"
