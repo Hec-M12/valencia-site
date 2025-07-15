@@ -18,7 +18,7 @@ const subjects = [
   {
     name: "Lenguaje y Comunicación",
     description:
-      "Impulsamos habilidades comunicativas en español e inglés, promoviendo la expresión oral y escrita en un ambiente seguro y participativo para todos.",
+      "Impulsamos habilidades comunicativas en español, francés e inglés, preparando a los estudiantes para la lectoescritura.",
     icon: <FaLanguage className="text-blue-400 w-12 h-12" />,
   },
   {
@@ -72,6 +72,12 @@ const extracurricularActivities = [
     description: "Tiempo de exploración y socialización que fomenta la imaginación y la independencia.",
     iconName: "Gamepad2",
     color: "bg-blue-400",
+  },
+  {
+    name: "Vida Práctica",
+    description: "Fortalece la autonomía de los estudiantes al realizar actividades del día a día.",
+    iconName: "FaHandsHelping",
+    color: "bg-yellow-500",
   },
 ]
 
