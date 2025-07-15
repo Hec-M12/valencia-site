@@ -42,6 +42,44 @@ const curriculumData = {
   subjects,
 }
 
+const extracurricularActivities = [
+  {
+    name: "Música Inicial",
+    description: "Iniciación musical con canciones, ritmos y instrumentos sencillos que desarrollan la creatividad.",
+    iconName: "FaMusic",
+    color: "bg-purple-400",
+  },
+  {
+    name: "Educación Física",
+    description: "Actividades motrices y juegos que fortalecen el desarrollo físico y la coordinación.",
+    iconName: "FaRunning",
+    color: "bg-green-400",
+  },
+  {
+    name: "Arte y Manualidades",
+    description: "Expresión artística a través de dibujo, pintura y manualidades que estimulan la creatividad.",
+    iconName: "FaPalette",
+    color: "bg-pink-400",
+  },
+  {
+    name: "Juegos Didácticos",
+    description: "Actividades lúdicas que refuerzan el aprendizaje y desarrollan habilidades cognitivas.",
+    iconName: "FaPuzzlePiece",
+    color: "bg-yellow-400",
+  },
+  {
+    name: "Juego Libre",
+    description: "Tiempo de exploración y socialización que fomenta la imaginación y la independencia.",
+    iconName: "Gamepad2",
+    color: "bg-blue-400",
+  },
+]
+
+const extracurricularData = {
+  title: "Actividades Complementarias",
+  description: "Actividades diseñadas especialmente para la edad preescolar que complementan el aprendizaje académico.",
+}
+
 const sampleImages = [
   "/images/hero/hero-bg.png",
   "/images/backgrounds/buhos-hero1.png",
@@ -67,7 +105,11 @@ export default function Preescolar() {
         description={curriculumData.description}
         subjects={curriculumData.subjects}
       />
-      <ExtracurricularSection />
+      <ExtracurricularSection
+        title={extracurricularData.title}
+        description={extracurricularData.description}
+        activities={extracurricularActivities}
+      />
       <AdmissionsSection />
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">

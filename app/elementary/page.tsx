@@ -42,6 +42,50 @@ const curriculumData = {
   subjects,
 }
 
+const extracurricularActivities = [
+  {
+    name: "Fútbol",
+    description: "Desarrollo de habilidades deportivas, trabajo en equipo y disciplina a través del deporte.",
+    iconName: "FaFootballBall",
+    color: "bg-green-500",
+  },
+  {
+    name: "Música",
+    description: "Aprendizaje de instrumentos musicales y desarrollo de habilidades artísticas y culturales.",
+    iconName: "FaMusic",
+    color: "bg-purple-500",
+  },
+  {
+    name: "Francés",
+    description: "Tercer idioma que amplía las perspectivas culturales y comunicativas de los estudiantes.",
+    iconName: "Globe",
+    color: "bg-blue-500",
+  },
+  {
+    name: "Ciencias Experimentales",
+    description: "Laboratorios y experimentos que despiertan la curiosidad científica y el pensamiento crítico.",
+    iconName: "FaFlask",
+    color: "bg-orange-500",
+  },
+  {
+    name: "Ajedrez",
+    description: "Desarrollo del pensamiento estratégico, concentración y habilidades de resolución de problemas.",
+    iconName: "FaChess",
+    color: "bg-gray-600",
+  },
+  {
+    name: "Arte y Creatividad",
+    description: "Expresión artística a través de diferentes técnicas que fomentan la creatividad y autoexpresión.",
+    iconName: "FaPalette",
+    color: "bg-pink-500",
+  },
+]
+
+const extracurricularData = {
+  title: "Actividades Extracurriculares",
+  description: "Programa integral de actividades que complementan la formación académica y desarrollan talentos especiales.",
+}
+
 const sampleImages = [
   "/images/hero/hero-bg.png",
   "/images/backgrounds/buhos-hero1.png",
@@ -65,7 +109,11 @@ export default function Primaria() {
         description={curriculumData.description}
         subjects={curriculumData.subjects}
       />
-      <ExtracurricularSection />
+      <ExtracurricularSection
+        title={extracurricularData.title}
+        description={extracurricularData.description}
+        activities={extracurricularActivities}
+      />
       <AdmissionsSection />
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">

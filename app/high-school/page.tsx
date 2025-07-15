@@ -42,6 +42,62 @@ const curriculumData = {
   subjects,
 }
 
+const extracurricularActivities = [
+  {
+    name: "Modelo de Naciones Unidas",
+    description: "Simulaciones diplomáticas que desarrollan habilidades de debate, negociación y liderazgo global.",
+    iconName: "Globe",
+    color: "bg-blue-600",
+  },
+  {
+    name: "Robótica y Programación",
+    description: "Proyectos tecnológicos avanzados que preparan para las carreras del futuro.",
+    iconName: "FaCode",
+    color: "bg-cyan-600",
+  },
+  {
+    name: "Debate y Oratoria",
+    description: "Desarrollo de habilidades de comunicación, argumentación y pensamiento crítico.",
+    iconName: "FaGavel",
+    color: "bg-red-600",
+  },
+  {
+    name: "Teatro y Drama",
+    description: "Expresión artística que fortalece la confianza, creatividad y habilidades comunicativas.",
+    iconName: "FaTheaterMasks",
+    color: "bg-purple-600",
+  },
+  {
+    name: "Deportes Competitivos",
+    description: "Equipos deportivos que representan al colegio en competencias locales y nacionales.",
+    iconName: "Trophy",
+    color: "bg-green-600",
+  },
+  {
+    name: "Investigación Científica",
+    description: "Proyectos de investigación avanzada en laboratorios especializados con metodología universitaria.",
+    iconName: "FaMicroscope",
+    color: "bg-orange-600",
+  },
+  {
+    name: "Liderazgo Estudiantil",
+    description: "Gobierno estudiantil y proyectos de servicio comunitario que forman ciudadanos responsables.",
+    iconName: "FaUsers",
+    color: "bg-indigo-600",
+  },
+  {
+    name: "Taekwondo Avanzado",
+    description: "Arte marcial que desarrolla disciplina, respeto y autocontrol en niveles competitivos.",
+    iconName: "Zap",
+    color: "bg-yellow-600",
+  },
+]
+
+const extracurricularData = {
+  title: "Actividades de Excelencia",
+  description: "Programa avanzado de actividades que preparan a nuestros estudiantes para el liderazgo universitario y profesional.",
+}
+
 const sampleImages = [
   "/images/hero/hero-bg.png",
   "/images/backgrounds/buhos-hero1.png",
@@ -65,7 +121,11 @@ export default function Secundaria() {
         description={curriculumData.description}
         subjects={curriculumData.subjects}
       />
-      <ExtracurricularSection />
+      <ExtracurricularSection
+        title={extracurricularData.title}
+        description={extracurricularData.description}
+        activities={extracurricularActivities}
+      />
       <AdmissionsSection />
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
