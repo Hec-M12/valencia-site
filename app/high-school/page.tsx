@@ -119,12 +119,6 @@ const extracurricularActivities = [
     color: "bg-purple-600",
   },
   {
-    name: "Deportes Competitivos",
-    description: "Equipos deportivos que representan al colegio en competencias locales y nacionales.",
-    iconName: "Trophy",
-    color: "bg-green-600",
-  },
-  {
     name: "Investigación Científica",
     description: "Proyectos de investigación avanzada en laboratorios especializados con metodología universitaria.",
     iconName: "FaMicroscope",
