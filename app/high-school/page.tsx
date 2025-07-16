@@ -7,6 +7,57 @@ import AdmissionsSection from "@/components/sections/AdmissionsSection"
 import ContactanosSection from "@/components/sections/ContactanosSection"
 import ImageSlider from "@/components/shared/ImageSlider"
 import { FaGraduationCap, FaBookOpen, FaChild } from "react-icons/fa"
+import { FileText, CheckCircle, Calendar, Phone } from "lucide-react"
+const admissionSteps = [
+  {
+    number: 1,
+    title: "Solicitud de Inscripción",
+    description: "Completa el formulario de inscripción y entrega los documentos requeridos en la oficina de admisiones.",
+    icon: <FileText className="w-6 h-6 text-white" />,
+    details: [
+      "Formulario de inscripción completo",
+      "Partida de nacimiento original",
+      "Certificados de notas de secundaria",
+      "Fotografía tamaño carnet",
+    ],
+  },
+  {
+    number: 2,
+    title: "Evaluación Académica",
+    description: "El estudiante realizará una evaluación de conocimientos y habilidades según el grado.",
+    icon: <CheckCircle className="w-6 h-6 text-white" />,
+    details: [
+      "Examen de matemáticas",
+      "Examen de español",
+      "Evaluación de inglés (según el grado)",
+      "Entrevista con psicólogo educativo",
+    ],
+  },
+  {
+    number: 3,
+    title: "Entrevista Familiar",
+    description: "Reunión con la familia para conocer expectativas, historial académico y resolver dudas.",
+    icon: <Phone className="w-6 h-6 text-white" />,
+    details: [
+      "Entrevista con padres de familia",
+      "Presentación del proyecto educativo",
+      "Información sobre costos y calendario",
+      "Resolución de dudas específicas",
+    ],
+  },
+  {
+    number: 4,
+    title: "Confirmación y Matrícula",
+    description: "Una vez aceptado, procede con el pago de matrícula y confirma el cupo.",
+    icon: <Calendar className="w-6 h-6 text-white" />,
+    details: [
+      "Notificación de aceptación",
+      "Pago de matrícula y primera mensualidad",
+      "Entrega de lista de útiles escolares",
+      "Confirmación de cupo para el año escolar",
+    ],
+  },
+]
 
 const subjects = [
   {
@@ -126,7 +177,7 @@ export default function Secundaria() {
         description={extracurricularData.description}
         activities={extracurricularActivities}
       />
-      <AdmissionsSection />
+      <AdmissionsSection steps={admissionSteps} />
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">
