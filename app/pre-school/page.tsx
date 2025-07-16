@@ -1,12 +1,15 @@
+"use client"
+
 import Navbar from "@/components/layout/Navbar"
 import Footer from "@/components/layout/Footer"
 import SedeHero from "@/components/sections/SedeHero"
 import CurriculumSection from "@/components/sections/CurriculumSection"
 import ExtracurricularSection from "@/components/sections/ExtracurricularSection"
-import AdmissionsSection from "@/components/sections/AdmissionsSection"
 import ContactanosSection from "@/components/sections/ContactanosSection"
 import ImageSlider from "@/components/shared/ImageSlider"
 import { FaChild, FaBookOpen, FaPalette, FaLanguage } from "react-icons/fa"
+import AdmissionsSection from "@/components/sections/AdmissionsSection"
+import { FileText, CheckCircle, Calendar, Phone } from "lucide-react"
 
 const subjects = [
   {
@@ -86,6 +89,45 @@ const extracurricularData = {
   description: "Actividades diseñadas especialmente para la edad preescolar que complementan el aprendizaje académico.",
 }
 
+const admissionSteps = [
+  {
+    number: 1,
+    title: "Solicitud de Inscripción",
+    description: "Completa el formulario de inscripción y entrega los documentos requeridos en la oficina de admisiones.",
+    icon: <FileText className="w-6 h-6 text-white" />,
+    details: [
+      "Formulario de inscripción completo",
+      "Partida de nacimiento original",
+      "Fotografía tamaño carnet",
+      "Copia de tarjeta de vacunación",
+      "Copia de identificación de los padres o tutores",
+    ],
+  },
+  {
+    number: 2,
+    title: "Entrevista Familiar",
+    description: "Participa en una entrevista con el equipo de admisiones para conocer a la familia y resolver dudas.",
+    icon: <Phone className="w-6 h-6 text-white" />,
+    details: [
+      "Entrevista con padres o tutores",
+      "Presentación del proyecto educativo",
+      "Resolución de dudas sobre el proceso",
+    ],
+  },
+
+  {
+    number: 3,
+    title: "Confirmación y Matrícula",
+    description: "Recibe la notificación de aceptación y realiza el pago de matrícula para asegurar el cupo.",
+    icon: <Calendar className="w-6 h-6 text-white" />,
+    details: [
+      "Notificación de aceptación",
+      "Pago de matrícula y primera mensualidad",
+      "Entrega de lista de útiles escolares",
+    ],
+  },
+]
+
 const sampleImages = [
   "/images/hero/hero-bg.png",
   "/images/backgrounds/buhos-hero1.png",
@@ -116,7 +158,7 @@ export default function Preescolar() {
         description={extracurricularData.description}
         activities={extracurricularActivities}
       />
-      <AdmissionsSection />
+      <AdmissionsSection steps={admissionSteps} />
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-12">

@@ -26,9 +26,10 @@ export default function Footer() {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-valencia-blue">Información de contacto</h4>
             <div className="space-y-5 text-black/80">
-              <p className="flex items-center gap-2"><MapPinned strokeWidth={2} size={23} color="#216B8D"/> Col. Palmira, Tegucigalpa, Honduras</p>
-              <p className="flex items-center gap-2"><Phone strokeWidth={2} size={23} color="#216B8D"/> +504 2222-2222</p>
-              <p className="flex items-center gap-2"><Mail strokeWidth={2} size={23} color="#216B8D"/> info@institutovalencia.edu.hn</p>
+              <p className="flex items-center gap-2"><MapPinned strokeWidth={2} size={36} color="#216B8D"/> Sede Sur: Res. Los Hidalgos, Comayagüela, Honduras </p>
+              <p className="flex items-center gap-2"><MapPinned strokeWidth={2} size={36} color="#216B8D"/> Sede Principal: Res. Valencia, Tegucigalpa, Honduras </p>
+              <p className="flex items-center gap-2"><Phone strokeWidth={2} size={23} color="#216B8D"/> +504 9438-7154</p>
+              <p className="flex items-center gap-2"><Mail strokeWidth={2} size={23} color="#216B8D"/> info@valencia-school.edu.hn</p>
             </div>
           </div>
 

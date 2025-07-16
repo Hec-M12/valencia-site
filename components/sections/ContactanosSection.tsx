@@ -12,9 +12,9 @@ export default function ContactanosSection() {
         </p>
         <div className="mt-8 grid grid-rows-3 gap-6 max-w-full mx-auto">
           {[
-            { Icon: Mail, label: "Correo", value: "info@institutovalencia.edu.hn", href: "mailto:info@institutovalencia.edu.hn" },
-            { Icon: Phone, label: "Teléfono", value: "+504 9999-9999", href: "tel:+50499999999" },
-            { Icon: MessageCircle, label: "WhatsApp", value: "+504 9999-9999", href: "https://wa.me/50499999999", target: "_blank" }
+            { Icon: Mail, label: "Correo", value: "info@valencia-school.edu.hn", href: "mailto:info@valencia-school.edu.hn" },
+            { Icon: Phone, label: "Teléfono", value: "+504 9438-7154", href: "tel:+50494387154" },
+            { Icon: MessageCircle, label: "WhatsApp", value: "+504 9438-7154", href: "https://wa.me/50494387154", target: "_blank" }
           ].map(({ Icon, label, value, href, target }) => (
             <motion.a
               initial={{ opacity: 0}}
