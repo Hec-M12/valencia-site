@@ -1,63 +1,63 @@
-import Navbar from "@/components/layout/Navbar"
-import Footer from "@/components/layout/Footer"
-import SedeHero from "@/components/sections/SedeHero"
-import CurriculumSection from "@/components/sections/CurriculumSection"
-import ExtracurricularSection from "@/components/sections/ExtracurricularSection"
-import AdmissionsSection from "@/components/sections/AdmissionsSection"
-import ContactanosSection from "@/components/sections/ContactanosSection"
-import ImageSlider from "@/components/shared/ImageSlider"
-import { FaGraduationCap, FaBookOpen, FaChild } from "react-icons/fa"
-import { FileText, CheckCircle, Calendar, Phone } from "lucide-react"
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import SedeHero from "@/components/sections/SedeHero";
+import CurriculumSection from "@/components/sections/CurriculumSection";
+import ExtracurricularSection from "@/components/sections/ExtracurricularSection";
+import AdmissionsSection from "@/components/sections/AdmissionsSection";
+import ContactanosSection from "@/components/sections/ContactanosSection";
+import ImageSlider from "@/components/shared/ImageSlider";
+import { FaGraduationCap, FaBookOpen, FaChild } from "react-icons/fa";
+import { FileText, Calendar, Phone } from "lucide-react";
+
 const admissionSteps = [
   {
     number: 1,
-    title: "Solicitud de Inscripción",
-    description: "Completa el formulario de inscripción y entrega los documentos requeridos en la oficina de admisiones.",
+    title: "Solicitud de Información",
+    description:
+      "El padre o tutor se presenta en la oficina de admisiones y expresa su interés en matricular al estudiante. También se recopila información sobre el historial académico del estudiante.",
     icon: <FileText className="w-6 h-6 text-white" />,
     details: [
-      "Formulario de inscripción completo",
-      "Partida de nacimiento original",
-      "Certificados de notas de secundaria",
-      "Fotografía tamaño carnet",
+      "Confirmar la edad del niño",
+      "Recibir información inicial sobre el proceso",
+      "Recopilar historial del estudiante y razones para el cambio de escuela",
     ],
   },
   {
     number: 2,
-    title: "Evaluación Académica",
-    description: "El estudiante realizará una evaluación de conocimientos y habilidades según el grado.",
-    icon: <CheckCircle className="w-6 h-6 text-white" />,
+    title: "Entrevista Académica",
+    description:
+      "Se realiza una entrevista con la coordinadora académica o directora para intercambiar preguntas y respuestas sobre el estudiante y el programa educativo.",
+    icon: <Phone className="w-6 h-6 text-white" />,
     details: [
-      "Examen de matemáticas",
-      "Examen de español",
-      "Evaluación de inglés (según el grado)",
-      "Entrevista con psicólogo educativo",
+      "Intercambio de preguntas y respuestas con la coordinadora",
+      "Presentación del proyecto educativo",
+      "Resolución de dudas sobre el programa",
     ],
   },
   {
     number: 3,
-    title: "Entrevista Familiar",
-    description: "Reunión con la familia para conocer expectativas, historial académico y resolver dudas.",
-    icon: <Phone className="w-6 h-6 text-white" />,
+    title: "Entrega de Documentos",
+    description:
+      "Los padres deben entregar los documentos requeridos para completar el proceso de matrícula.",
+    icon: <FileText className="w-6 h-6 text-white" />,
     details: [
-      "Entrevista con padres de familia",
-      "Presentación del proyecto educativo",
-      "Información sobre costos y calendario",
-      "Resolución de dudas específicas",
+      "Partida de nacimiento original",
+      "Copia de identificación de los padres",
+      "Diploma de preescolar (si aplica)",
+      "Copia de certificados de estudios previos",
+      "Constancia de solvencia",
+      "Constancia de conducta de la escuela anterior",
     ],
   },
   {
     number: 4,
     title: "Confirmación y Matrícula",
-    description: "Una vez aceptado, procede con el pago de matrícula y confirma el cupo.",
+    description:
+      "Se entregan la información económica y se realiza el proceso de matrícula, incluyendo la entrega de documentos requeridos. Después de repasar y firmar los documentos, se entrega a los padres una copia de nuestro manual de convivencia y la lista de útiles escolares.",
     icon: <Calendar className="w-6 h-6 text-white" />,
-    details: [
-      "Notificación de aceptación",
-      "Pago de matrícula y primera mensualidad",
-      "Entrega de lista de útiles escolares",
-      "Confirmación de cupo para el año escolar",
-    ],
+    details: ["Entrega de precios y confirmación de inscripción"],
   },
-]
+];
 
 const subjects = [
   {
@@ -81,73 +81,67 @@ const subjects = [
   {
     name: "Bilingüismo y Comunicación",
     description:
-      "Clases avanzadas de inglés y español, preparación para exámenes y habilidades de comunicación para un mundo globalizado y competitivo.",
+      "Clases de inglés, español y francés que fortalecen las habilidades de comunicación y preparan a los estudiantes para interactuar en un mundo globalizado y competitivo.",
     icon: <FaBookOpen className="text-pink-700 w-12 h-12" />,
   },
-]
+];
 
 const curriculumData = {
   title: "Secundaria: Excelencia Académica y Liderazgo Global",
   description:
     "Nuestra secundaria y bachillerato preparan a los estudiantes para su educación futura, con programas rigurosos, asesoría académica, laboratorios especializados y formación en liderazgo. Nuestro enfoque es integral, bilingüe y orientado al éxito global.",
   subjects,
-}
+};
 
 const extracurricularActivities = [
   {
-    name: "Modelo de Naciones Unidas",
-    description: "Simulaciones diplomáticas que desarrollan habilidades de debate, negociación y liderazgo global.",
-    iconName: "Globe",
-    color: "bg-blue-600",
-  },
-  {
     name: "Robótica y Programación",
-    description: "Proyectos tecnológicos avanzados que preparan para las carreras del futuro.",
+    description:
+      "Proyectos tecnológicos avanzados que preparan para las carreras del futuro.",
     iconName: "FaCode",
     color: "bg-cyan-600",
   },
   {
-    name: "Debate y Oratoria",
-    description: "Desarrollo de habilidades de comunicación, argumentación y pensamiento crítico.",
-    iconName: "FaGavel",
-    color: "bg-red-600",
-  },
-  {
-    name: "Teatro y Drama",
-    description: "Expresión artística que fortalece la confianza, creatividad y habilidades comunicativas.",
-    iconName: "FaTheaterMasks",
-    color: "bg-purple-600",
-  },
-  {
     name: "Investigación Científica",
-    description: "Proyectos de investigación avanzada en laboratorios especializados con metodología universitaria.",
+    description:
+      "Proyectos de investigación avanzada en laboratorios especializados con metodología universitaria.",
     iconName: "FaMicroscope",
     color: "bg-orange-600",
   },
   {
     name: "Liderazgo Estudiantil",
-    description: "Gobierno estudiantil y proyectos de servicio comunitario que forman ciudadanos responsables.",
+    description:
+      "Gobierno estudiantil y proyectos de servicio comunitario que forman ciudadanos responsables.",
     iconName: "FaUsers",
     color: "bg-indigo-600",
   },
   {
-    name: "Taekwondo Avanzado",
-    description: "Arte marcial que desarrolla disciplina, respeto y autocontrol en niveles competitivos.",
-    iconName: "Zap",
-    color: "bg-yellow-600",
+    name: "Arte y Creatividad",
+    description:
+      "Actividades artísticas que fomentan la imaginación, la autoexpresión y el desarrollo de habilidades creativas.",
+    iconName: "FaPalette",
+    color: "bg-pink-600",
   },
-]
+  {
+    name: "Plataforma de Lectura",
+    description:
+      "Trabajamos con una plataforma donde los estudiantes pueden leer libros e interactuar con sus autores.",
+    iconName: "FaBookOpen",
+    color: "bg-green-500",
+  },
+];
 
 const extracurricularData = {
   title: "Actividades de Excelencia",
-  description: "Programa avanzado de actividades que preparan a nuestros estudiantes para el liderazgo universitario y profesional.",
-}
+  description:
+    "Programa avanzado de actividades que preparan a nuestros estudiantes para el liderazgo universitario y profesional.",
+};
 
 const sampleImages = [
   "/images/hero/hero-bg.png",
   "/images/backgrounds/buhos-hero1.png",
   "/images/backgrounds/buhos-hero2.png",
-]
+];
 
 export default function Secundaria() {
   return (
@@ -179,7 +173,8 @@ export default function Secundaria() {
               Galería de Imágenes
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Vive la experiencia de secundaria: laboratorios, proyectos y vida estudiantil.
+              Vive la experiencia de secundaria: laboratorios, proyectos y vida
+              estudiantil.
             </p>
           </div>
           <ImageSlider images={sampleImages} />
@@ -188,5 +183,5 @@ export default function Secundaria() {
       <ContactanosSection />
       <Footer />
     </>
-  )
+  );
 }

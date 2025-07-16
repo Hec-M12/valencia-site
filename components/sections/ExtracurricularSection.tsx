@@ -65,7 +65,7 @@ export default function ExtracurricularSection({
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-2 ${activities.length === 8 ? 'lg:grid-cols-4' : 'lg:grid-cols-3'} gap-8`}>
           {activities.map((activity, index) => {
             const IconComponent = iconMap[activity.iconName] || Trophy
             return (
