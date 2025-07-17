@@ -2,14 +2,14 @@
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import SedeHero from "@/components/sections/SedeHero";
+import DivisionHero from "@/components/sections/DivisionHero";
 import CurriculumSection from "@/components/sections/CurriculumSection";
 import ExtracurricularSection from "@/components/sections/ExtracurricularSection";
 import ContactanosSection from "@/components/sections/ContactanosSection";
 import ImageSlider from "@/components/shared/ImageSlider";
 import { FaChild, FaBookOpen, FaPalette, FaLanguage } from "react-icons/fa";
 import AdmissionsSection from "@/components/sections/AdmissionsSection";
-import { FileText, CheckCircle, Calendar, Phone } from "lucide-react";
+import { FileText, Calendar, Phone } from "lucide-react";
 
 const subjects = [
   {
@@ -144,7 +144,7 @@ export default function Preescolar() {
   return (
     <>
       <Navbar />
-      <SedeHero
+      <DivisionHero
         heading={
           <>
             <span>Pre</span>
@@ -152,7 +152,7 @@ export default function Preescolar() {
             <span>Escolar</span>
           </>
         }
-        src="/images/backgrounds/buhos-hero1.png"
+        src="/images/backgrounds/buho-pre.png"
       />
       <CurriculumSection
         title={curriculumData.title}

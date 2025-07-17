@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import SedeHero from "@/components/sections/SedeHero";
+import DivisionHero from "@/components/sections/DivisionHero";
 import CurriculumSection from "@/components/sections/CurriculumSection";
 import ExtracurricularSection from "@/components/sections/ExtracurricularSection";
 import AdmissionsSection from "@/components/sections/AdmissionsSection";
@@ -147,13 +147,13 @@ export default function Secundaria() {
   return (
     <>
       <Navbar />
-      <SedeHero
+      <DivisionHero
         heading={
           <>
             <span>Secundaria</span>
           </>
         }
-        src="/images/backgrounds/buhos-hero2.png"
+        src="/images/backgrounds/buho-secundaria.png"
       />
       <CurriculumSection
         title={curriculumData.title}

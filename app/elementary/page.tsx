@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import SedeHero from "@/components/sections/SedeHero";
+import DivisionHero from "@/components/sections/DivisionHero";
 import CurriculumSection from "@/components/sections/CurriculumSection";
 import ExtracurricularSection from "@/components/sections/ExtracurricularSection";
 import AdmissionsSection from "@/components/sections/AdmissionsSection";
@@ -168,13 +168,13 @@ export default function Primaria() {
   return (
     <>
       <Navbar />
-      <SedeHero
+      <DivisionHero
         heading={
           <>
             <span>Primaria</span>
           </>
         }
-        src="/images/backgrounds/buhos-hero2.png"
+        src="/images/backgrounds/buho-primaria.png"
       />
       <CurriculumSection
         title={curriculumData.title}
