@@ -1,7 +1,7 @@
 "use client"
 import React from "react"
 import Image from "next/image"
-import { MapPinned, Phone, Mail } from "lucide-react"
+import { MapPinned, Phone, Mail, Instagram, Facebook } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -20,6 +20,16 @@ export default function Footer() {
             <p className="text-black/80 mt-4 pr-2">
               Educando y transformando generaciones con excelencia académica y valores sólidos. En Instituto Valencia, formamos líderes del futuro.
             </p>
+            <div className="flex flex-col space-y-4 mt-4">
+              <p className="flex items-center gap-2">
+                <Instagram strokeWidth={2} size={30} color="#216B8D" />
+                <a href="https://www.instagram.com/valenciaschoolhn/" target="_blank" rel="noopener noreferrer" className="hover:underline">@valenciaschoolhn</a>
+              </p>
+              <p className="flex items-center gap-2">
+                <Facebook strokeWidth={2} size={30} color="#216B8D" />
+                <a href="https://www.facebook.com/ValenciaSchoolHN" target="_blank" rel="noopener noreferrer" className="hover:underline">@ValenciaSchoolHN</a>
+              </p>
+            </div>
           </div>
 
           {/* Información de contacto */}
@@ -28,8 +38,8 @@ export default function Footer() {
             <div className="space-y-5 text-black/80">
               <p className="flex items-center gap-2"><MapPinned strokeWidth={2} size={36} color="#216B8D"/> Sede Sur: Res. Los Hidalgos, Comayagüela, Honduras </p>
               <p className="flex items-center gap-2"><MapPinned strokeWidth={2} size={36} color="#216B8D"/> Sede Principal: Res. Valencia, Tegucigalpa, Honduras </p>
-              <p className="flex items-center gap-2"><Phone strokeWidth={2} size={23} color="#216B8D"/> +504 9438-7154</p>
-              <p className="flex items-center gap-2"><Mail strokeWidth={2} size={23} color="#216B8D"/> info@valencia-school.edu.hn</p>
+              <p className="flex items-center gap-2"><Phone strokeWidth={2} size={30} color="#216B8D"/> +504 9438-7154</p>
+              <p className="flex items-center gap-2"><Mail strokeWidth={2} size={30} color="#216B8D"/> info@valencia-school.edu.hn</p>
             </div>
           </div>
 

@@ -52,13 +52,15 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-29">
           {/* Logo */}
           <div className="flex items-center">
-            <Image
-              src="/images/logos/valencia-logo.png?height=60&width=160"
-              alt="Instituto Valencia Logo"
-              width={160}
-              height={80}
-              className="h-20 w-auto"
-            />
+            <Link href="/">
+              <Image
+                src="/images/logos/valencia-logo.png?height=60&width=160"
+                alt="Instituto Valencia Logo"
+                width={160}
+                height={80}
+                className="h-20 w-auto"
+              />
+            </Link>
           </div>
 
           {/* Desktop Menu */}
