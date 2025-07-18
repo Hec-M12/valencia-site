@@ -37,7 +37,7 @@ export default function DivisionHero({ heading, src }: DivisionHeroProps) {
         </h1>
       </div>
       {/* Owl below title on mobile */}
-      <div className="block md:hidden flex justify-center pt-8 pb-4">
+      <div className="block md:hidden flex justify-center pt-4 pb-4">
         <Image src={src} alt="Búho Valencia" width={275} height={275} />
       </div>
     </section>

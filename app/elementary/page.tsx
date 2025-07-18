@@ -201,7 +201,9 @@ export default function Primaria() {
           <ImageSlider images={sampleImages} />
         </div>
       </section>
-      <ContactanosSection />
+      <div className="w-[90%] mx-auto pb-8">
+        <ContactanosSection/>
+      </div>
       <Footer />
     </>
   );
