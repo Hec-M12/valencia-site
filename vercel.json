@@ -2,7 +2,11 @@
   "rewrites": [
     {
       "source": "/sevs/:path*",
-      "destination": "https://www.valenciaschoolhn.com/sevs/:path*"
+      "destination": "https://valenciaschoolhn.com/sevs/:path*"
+    },
+    {
+      "source": "/sevs",
+      "destination": "https://valenciaschoolhn.com/sevs"
     }
   ]
 }
