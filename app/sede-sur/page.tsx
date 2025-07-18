@@ -37,7 +37,7 @@ export default function SedeSur() {
       <LocationComponent
         lat={14.046581427334896}
         lng={-87.25486578763883}
-        address="Residencial Valencia, Tegucigalpa, Honduras"
+        address="Res. Los Hidalgos, Comayagüela, Honduras"
         gMapsUrl="https://maps.app.goo.gl/pE4PzLHvuo4r2AS77"
         wazeUrl="https://www.waze.com/en/live-map/directions/hn/departamento-de-francisco-morazan/tgu/campus-valencia-school-hidalgos?place=ChIJybQXbwCXb48RJZ5GcU--5-U"
       />

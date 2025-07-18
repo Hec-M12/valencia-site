@@ -217,18 +217,6 @@ export default function Navbar() {
                   Sede Sur
                 </Link>
                 <Link
-                  href="/extracurriculares"
-                  className={`
-                    nav-link
-                    hover:font-bold
-                    text-valencia-blue
-                    block px-3 py-2 transition-colors duration-200
-                    ${pathname === "/extracurriculares" ? "font-bold text-valencia-blue" : ""}
-                  `}
-                >
-                  Extracurriculares
-                </Link>
-                <Link
                   href="/#contacto"
                   className={`
                     nav-link
