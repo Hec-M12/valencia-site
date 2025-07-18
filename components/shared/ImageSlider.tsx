@@ -33,25 +33,25 @@ export default function ImageSlider({ images, className = "" }: ImageSliderProps
   }, [carouselApi.current])
 
   return (
-    <Carousel className={`w-full max-w-4xl mx-auto ${className}`} setApi={api => {
+    <Carousel className={`w-full md:max-w-xl lg:max-w-xl max-w-lg mx-auto ${className}`} setApi={api => {
       carouselApi.current = api;
     }} opts={{ loop: true }}>
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
-            <div className="relative aspect-video w-[85%] mx-auto">
+            <div className="relative aspect-square w-full mx-auto">
               <Image
                 src={image}
                 alt={`Imagen ${index + 1}`}
                 fill
-                className="object-cover rounded-lg"
+                className="object-contain rounded-lg"
               />
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="md:-ml-8 lg:-ml-12" />
+      <CarouselNext className="md:-mr-8 lg:-mr-12" />
     </Carousel>
   )
 }

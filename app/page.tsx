@@ -5,6 +5,7 @@ import Sedes from "@/components/sections/SedesSection"
 import Footer from "@/components/layout/Footer"
 import KeyValuesSection from "@/components/sections/KeyValuesSection"
 import VideoSection from "@/components/sections/VideoSection"
+import DivisionsComponent from "@/components/shared/DivisionsComponent"
 
 export default function InstitutoValencia() {
   return (
@@ -13,6 +14,7 @@ export default function InstitutoValencia() {
       <Hero />
       <KeyValuesSection />
       <Sedes />
+      <DivisionsComponent />
       <VideoSection />
       <Footer />
     </div>

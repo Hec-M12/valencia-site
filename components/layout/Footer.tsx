@@ -41,7 +41,7 @@ export default function Footer() {
               <a href="/nosotros" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Nosotros</a>
               <a href="/sede-principal" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Sede Principal</a>
               <a href="/sede-sur" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Sede Sur</a>
-              <a href="/contacto" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Contacto</a>
+              <a href="/#contacto" className="hover:font-bold block text-black/80 hover:text-valencia-yellow transition-colors">Contacto</a>
             </div>
           </div>
         </div>

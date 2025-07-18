@@ -126,13 +126,13 @@ export default function Navbar() {
               </Link>
               {/* Contacto */}
               <Link
-                href="/contacto"
+                href="/#contacto"
                 className={`
                   nav-link
                   hover:font-bold
                   text-valencia-blue
                   ${
-                    pathname === "/contacto"
+                    pathname === "/#contacto"
                       ? "font-bold text-valencia-blue"
                       : ""
                   }
@@ -227,13 +227,13 @@ export default function Navbar() {
                   Extracurriculares
                 </Link>
                 <Link
-                  href="/contacto"
+                  href="/#contacto"
                   className={`
                     nav-link
                     hover:font-bold
                     text-valencia-blue
                     block px-3 py-2 transition-colors duration-200
-                    ${pathname === "/contacto" ? "font-bold text-valencia-blue" : ""}
+                    ${pathname === "/#contacto" ? "font-bold text-valencia-blue" : ""}
                   `}
                 >
                   Contacto

@@ -138,9 +138,10 @@ const extracurricularData = {
 };
 
 const sampleImages = [
-  "/images/hero/hero-bg.png",
-  "/images/backgrounds/buhos-hero1.png",
-  "/images/backgrounds/buhos-hero2.png",
+  "/images/sliders/hs-1.jpg",
+  "/images/sliders/hs-2.jpg",
+  "/images/sliders/hs-3.jpg",
+  "/images/sliders/hs-4.jpg",
 ];
 
 export default function Secundaria() {

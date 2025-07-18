@@ -159,9 +159,9 @@ const extracurricularData = {
 };
 
 const sampleImages = [
-  "/images/hero/hero-bg.png",
-  "/images/backgrounds/buhos-hero1.png",
-  "/images/backgrounds/buhos-hero2.png",
+  "/images/sliders/primary-1.jpg",
+  "/images/sliders/primary-2.jpg",
+  "/images/sliders/primary-3.jpg",
 ];
 
 export default function Primaria() {

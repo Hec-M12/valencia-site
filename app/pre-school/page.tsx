@@ -135,9 +135,11 @@ const admissionSteps = [
 ];
 
 const sampleImages = [
-  "/images/hero/hero-bg.png",
-  "/images/backgrounds/buhos-hero1.png",
-  "/images/backgrounds/buhos-hero2.png",
+  "/images/sliders/prek-1.jpg",
+  "/images/sliders/prek-2.jpg",
+  "/images/sliders/prek-3.jpg",
+  "/images/sliders/prek-4.jpg",
+  "/images/sliders/prek-5.jpg",
 ];
 
 export default function Preescolar() {
