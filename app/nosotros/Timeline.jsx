@@ -29,7 +29,7 @@ const historyEvents = [
       year: 1985,
       title: "Primer Grado y Traslado",
       detail:
-        "Se abre el primer grado y el colegio se traslada a la Residencial Valencia, donde permanece hasta hoy.",
+        "Se apertura el primer grado y el colegio se traslada a la Residencial Valencia, donde permanece hasta hoy.",
       icon: <FaSchool />
     },
     {
@@ -77,7 +77,7 @@ export default function Timeline() {
           Nuestra Trayectoria
         </h2>
         <p className="mt-2 text-gray-600 pb-4 mb-4">
-          Más de 35 años de hitos y crecimiento formando líderes críticos y creativos
+          Más de 40 años de hitos y crecimiento formando líderes críticos y creativos
         </p>
       </div>
       <VerticalTimeline

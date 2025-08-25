@@ -16,7 +16,7 @@ const divisions: Division[] = [
   {
     icon: <Apple size={48} className="text-valencia-blue" />,
     title: "Pre-Escolar",
-    subtitle: "(2-5 años)",
+    subtitle: "(Nursery-Kinder)",
     description:
       "Programa especializado de estimulación temprana, con currículum único y adaptado.",
     url: "/pre-school"
@@ -32,7 +32,7 @@ const divisions: Division[] = [
   {
     icon: <Globe size={48} className="text-valencia-blue" />,
     title: "Secundaria",
-    subtitle: "(7-11 grados)",
+    subtitle: "(7-11 grado)",
     description:
       "Preparación global enfocada en proyectos y solución de problemas reales.",
     url: "/high-school"
