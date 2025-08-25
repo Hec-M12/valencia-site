@@ -28,6 +28,11 @@ const valores = [
 		title: 'Lealtad',
 		subtitle: 'Compromiso firme con la comunidad.',
 	},
+	{
+		icon: <FaBalanceScale />,
+		title: 'Responsabilidad',
+		subtitle: 'Cumplir con deberes y compromisos.',
+	},
 ];
 
 export default function KeyValuesSection() {
@@ -48,28 +53,28 @@ export default function KeyValuesSection() {
 						Nuestros
 					</h3>
 				</div>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full gap-8 pt-6 md:pt-14">
-					{valores.map(({ icon, title, subtitle }) => (
-						<motion.div
-              initial={{ opacity: 0}}
-              whileInView={{ opacity: 1}}
+				<div className="grid grid-cols-1 w-full gap-8 pt-6 md:pt-14 md:flex md:flex-wrap md:justify-evenly lg:grid lg:grid-cols-5">
+          {valores.map(({ icon, title, subtitle }) => (
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true, amount: 0.2 }}
-							key={title}
-							className="w-[75vw] mx-auto md:w-full flex flex-col items-center text-center bg-valencia-light-blue rounded-lg p-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-						>
-							<div className="mb-4">
-								<div className="bg-white/20 rounded-full p-4 inline-flex items-center justify-center">
-									<div className="text-4xl text-white">{icon}</div>
-								</div>
-							</div>
-							<h3 className="font-semibold text-xl mb-2 text-white">
-								{title}
-							</h3>
-							<p className="text-gray-200">{subtitle}</p>
-						</motion.div>
-					))}
-				</div>
+              key={title}
+              className="w-[75vw] mx-auto md:w-[30%] lg:w-full flex flex-col items-center text-center bg-valencia-light-blue rounded-lg p-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+            >
+              <div className="mb-4">
+                <div className="bg-white/20 rounded-full p-4 inline-flex items-center justify-center">
+                  <div className="text-4xl md:text-3xl text-white">{icon}</div>
+                </div>
+              </div>
+              <h3 className="font-semibold text-xl md:text-lg mb-2 text-white">
+                {title}
+              </h3>
+              <p className="text-gray-200 md:text-sm">{subtitle}</p>
+            </motion.div>
+          ))}
+        </div>
 			</div>
 		</section>
 	);
