@@ -2,6 +2,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSedeSur from "@/components/sections/HeroSedeSur";
+import SedeSurCoordinators from "@/components/sections/SedeSurCoordinators";
 import SedeDescription from "@/components/shared/SedeDescription";
 import DivisionsComponent from "@/components/shared/DivisionsComponent";
 import LocationComponent from "@/components/shared/LocationComponent";
@@ -26,6 +27,7 @@ export default function SedeSur() {
         ]}
       />
       <DivisionsComponent />
+      <SedeSurCoordinators />
       <LocationComponent
         lat={14.046581427334896}
         lng={-87.25486578763883}

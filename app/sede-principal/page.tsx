@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSedePrincipal from "@/components/sections/HeroSedePrincipal";
+import SedePrincipalCoordinators from "@/components/sections/SedePrincipalCoordinators";
 import SedeDescription from "@/components/shared/SedeDescription";
 import DivisionsComponent from "@/components/shared/DivisionsComponent";
 import LocationComponent from "@/components/shared/LocationComponent";
@@ -21,6 +22,7 @@ export default function SedePrincipal() {
         ]}
       />
       <DivisionsComponent />
+      <SedePrincipalCoordinators />
       <LocationComponent
         lat={14.07176}
         lng={-87.17384}
