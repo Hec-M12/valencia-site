@@ -1,6 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import SedeHero from "@/components/sections/SedeHero";
+import HeroSedePrincipal from "@/components/sections/HeroSedePrincipal";
 import SedeDescription from "@/components/shared/SedeDescription";
 import DivisionsComponent from "@/components/shared/DivisionsComponent";
 import LocationComponent from "@/components/shared/LocationComponent";
@@ -9,16 +9,7 @@ export default function SedePrincipal() {
   return (
     <>
       <Navbar />
-      <SedeHero
-        heading={
-          <>
-            <span>Sede</span>
-            <br />
-            <span>Principal</span>
-          </>
-        }
-        src={"/images/backgrounds/buhos-hero1.png"}
-      />
+      <HeroSedePrincipal />
       <SedeDescription
         title="Descripción General"
         description="La Sede Principal está ubicada en el Residencial Valencia y es nuestra sede fundacional. Ofrece modalidades bilingüe y español, con un calendario de febrero a noviembre, desde nursery hasta undécimo, e inclusión de francés en el plan de estudios."

@@ -1,6 +1,6 @@
 "use client"
 import Navbar from "@/components/layout/Navbar"
-import Hero from "@/components/sections/Hero"
+import HeroSedePrincipal from "@/components/sections/HeroHomePage"
 import Sedes from "@/components/sections/SedesSection"
 import Footer from "@/components/layout/Footer"
 import KeyValuesSection from "@/components/sections/KeyValuesSection"
@@ -11,7 +11,7 @@ export default function InstitutoValencia() {
   return (
     <div className="min-h-screen bg-white font-body">
       <Navbar />
-      <Hero />
+      <HeroSedePrincipal />
       <KeyValuesSection />
       <Sedes />
       <DivisionsComponent />

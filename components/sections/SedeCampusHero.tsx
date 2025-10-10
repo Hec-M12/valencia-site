@@ -12,6 +12,7 @@ type CampusHeroConfig = {
   desktopTitle: string;
   desktopTitleClass?: string;
   mobileTitleLines: [string, string];
+  layout?: string;
 };
 
 const campusConfigs: Record<CampusVariant, CampusHeroConfig> = {
@@ -58,7 +59,7 @@ function CampusHero({ variant }: { variant: CampusVariant }) {
     <section id="inicio" className={sectionClasses}>
       <div className={sectionInnerClasses}>
         {config.layout === 'principal' ? (
-          <div className="flex w-full flex-col items-center justify-between gap-8 pb-6">
+          <div className="flex w-full flex-col items-center justify-between gap-8">
             <div className={titleWrapperBasePrincipal}>
               <h1 className={titleBaseClasses}>
                 <span className="block">Sede Principal</span>
@@ -69,7 +70,7 @@ function CampusHero({ variant }: { variant: CampusVariant }) {
                 src={config.image}
                 alt={config.alt}
                 fill
-                className={classNames('object-contain', config.imageClass)}
+                className={classNames('object-contain object-bottom', config.imageClass)}
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 75vw, 60vw"
               />

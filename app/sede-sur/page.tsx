@@ -1,6 +1,7 @@
+"use client"
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import SedeHero from "@/components/sections/SedeHero";
+import HeroSedeSur from "@/components/sections/HeroSedeSur";
 import SedeDescription from "@/components/shared/SedeDescription";
 import DivisionsComponent from "@/components/shared/DivisionsComponent";
 import LocationComponent from "@/components/shared/LocationComponent";
@@ -9,16 +10,7 @@ export default function SedeSur() {
   return (
     <>
       <Navbar />
-      <SedeHero
-        heading={
-          <>
-            <span>Sede</span>
-            <br />
-            <span>Sur</span>
-          </>
-        }
-        src={"/images/backgrounds/buhos-hero2.png"}
-      />
+      <HeroSedeSur />
       <SedeDescription
         title="Descripción General"
         description="La Sede Sur está ubicada en los Hidalgos y fue inaugurada en 2025. Es un campus moderno que ofrece la modalidad bilingüe con dos calendarios —Nacional (febrero a noviembre) y Anglosajón (agosto a junio), desde nursery hasta undécimo."
