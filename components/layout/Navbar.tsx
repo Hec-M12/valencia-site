@@ -72,7 +72,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
-                  hover:text-valencia-yellow
+                  hover:text-valencia-light-blue
                   text-valencia-blue
                   ${pathname === "/" ? "font-bold text-valencia-blue" : ""}
                 `}
@@ -85,7 +85,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
-                  hover:text-valencia-yellow
+                  hover:text-valencia-light-blue
                   text-valencia-blue
                   ${
                     pathname === "/nosotros"
@@ -102,7 +102,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
-                  hover:text-valencia-yellow
+                  hover:text-valencia-light-blue
                   text-valencia-blue
                   ${
                     pathname === "/sede-principal"
@@ -119,7 +119,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
-                  hover:text-valencia-yellow
+                  hover:text-valencia-light-blue
                   text-valencia-blue
                   ${
                     pathname === "/sede-sur"
@@ -136,7 +136,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
-                  hover:text-valencia-yellow
+                  hover:text-valencia-light-blue
                   text-valencia-blue
                   ${
                     pathname === "/#contacto"

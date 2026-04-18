@@ -34,7 +34,7 @@ export default function HeroHomePage() {
                 Inscribe a tu hijo
               </a>
               <a
-                href="#sedes"
+                href="#ubicaciones"
                 className="inline-flex items-center justify-center rounded-full border-2 border-valencia-blue bg-transparent px-8 py-4 font-urbanist font-semibold text-base md:text-lg text-valencia-blue transition-all duration-200 hover:-translate-y-0.5 hover:bg-valencia-blue hover:text-white hover:shadow-lg hover:shadow-valencia-blue/30 focus:outline-none focus:ring-4 focus:ring-valencia-blue/30"
               >
                 Conoce nuestras sedes
