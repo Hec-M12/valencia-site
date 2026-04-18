@@ -23,6 +23,23 @@ export default function HeroHomePage() {
               <span className="block text-4xl md:text-5xl lg:text-5xl xl:text-6xl mt-1">TRANSFORMANDO</span>
               <span className="block text-2xl md:text-2xl lg:text-3xl font-medium mt-1">GENERACIONES</span>
             </h1>
+
+            <div className="mt-8 md:mt-10 flex flex-wrap justify-center gap-4">
+              <a
+                href="https://wa.me/50494387154"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-valencia-green px-8 py-4 font-urbanist font-semibold text-base md:text-lg text-white shadow-lg shadow-valencia-green/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-valencia-green/90 hover:shadow-xl hover:shadow-valencia-green/40 focus:outline-none focus:ring-4 focus:ring-valencia-green/40"
+              >
+                Inscribe a tu hijo
+              </a>
+              <a
+                href="#sedes"
+                className="inline-flex items-center justify-center rounded-full border-2 border-valencia-blue bg-transparent px-8 py-4 font-urbanist font-semibold text-base md:text-lg text-valencia-blue transition-all duration-200 hover:-translate-y-0.5 hover:bg-valencia-blue hover:text-white hover:shadow-lg hover:shadow-valencia-blue/30 focus:outline-none focus:ring-4 focus:ring-valencia-blue/30"
+              >
+                Conoce nuestras sedes
+              </a>
+            </div>
           </div>
 
           <div className="flex justify-center">

@@ -47,7 +47,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white text-insituto-blue sticky p-5 z-30 border-b border-gray-100 shadow-md">
+    <nav className="bg-white text-valencia-blue sticky top-0 p-5 z-30 border-b border-gray-100 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
         <div className="flex justify-between items-center h-29">
           {/* Logo */}
@@ -72,6 +72,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
+                  hover:text-valencia-yellow
                   text-valencia-blue
                   ${pathname === "/" ? "font-bold text-valencia-blue" : ""}
                 `}
@@ -84,6 +85,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
+                  hover:text-valencia-yellow
                   text-valencia-blue
                   ${
                     pathname === "/nosotros"
@@ -100,6 +102,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
+                  hover:text-valencia-yellow
                   text-valencia-blue
                   ${
                     pathname === "/sede-principal"
@@ -116,6 +119,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
+                  hover:text-valencia-yellow
                   text-valencia-blue
                   ${
                     pathname === "/sede-sur"
@@ -132,6 +136,7 @@ export default function Navbar() {
                 className={`
                   nav-link
                   hover:font-bold
+                  hover:text-valencia-yellow
                   text-valencia-blue
                   ${
                     pathname === "/#contacto"

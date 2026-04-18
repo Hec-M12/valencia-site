@@ -46,10 +46,7 @@ export default function CurriculumSection({
               className="flex flex-col items-center text-center bg-white rounded-[1.5rem] shadow-[0_4px_12px_rgba(0,0,0,0.1)] p-6 w-full max-w-[20rem] cursor-default mx-auto"
             >
               <div className="mb-2 flex items-center justify-center">
-                {subject.icon &&
-                  React.cloneElement(subject.icon, {
-                    className: "w-12 h-12 text-valencia-blue",
-                  })}
+                {subject.icon}
               </div>
               <h3 className="font-semibold text-[1.125rem] text-valencia-blue mt-2">
                 {subject.name}

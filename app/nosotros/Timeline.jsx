@@ -91,7 +91,7 @@ export default function Timeline() {
             contentArrowStyle={{ borderRight: "7px solid #216B8D" }}
             iconStyle={{ background: "#216B8D", color: "#fff" }}
             icon={evt.icon}
-            animate={true}
+            animate={false}
           >
             <h3 className="vertical-timeline-element-title">{evt.title}</h3>
             <p>{evt.detail}</p>
