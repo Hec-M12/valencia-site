@@ -2,7 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Roboto, Quicksand, Urbanist } from "next/font/google"
 import Script from "next/script"
-import { organizationSchema, websiteSchema } from "@/app/schema"
+import { organizationSchema, websiteSchema, SITE_URL } from "@/app/schema"
 import "./globals.css"
 
 const roboto = Roboto({
@@ -27,7 +27,7 @@ const urbanist = Urbanist({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://valencia-school.edu.hn"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Valencia School — Escuela Bilingüe en Tegucigalpa, Honduras",
     template: "%s | Valencia School",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     title: "Valencia School — Escuela Bilingüe en Tegucigalpa, Honduras",
     description:
       "Escuela bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en Residencial Valencia y Los Hidalgos.",
-    url: "https://valencia-school.edu.hn",
+    url: SITE_URL,
     images: [
       {
         url: "/images/og-image.png",

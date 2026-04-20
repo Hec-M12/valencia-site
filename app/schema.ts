@@ -7,7 +7,11 @@
  * Reference: https://schema.org/EducationalOrganization
  */
 
-export const SITE_URL = "https://valencia-school.edu.hn"
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.NEXT_PUBLIC_VERCEL_URL
+    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+    : "https://valencia-school.edu.hn")
 export const SITE_NAME = "Valencia School"
 export const SITE_ALT_NAME = "Instituto Valencia"
 export const LOGO_URL = `${SITE_URL}/images/logos/valencia-logo.png`
