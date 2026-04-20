@@ -29,16 +29,16 @@ const urbanist = Urbanist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://valencia-school.edu.hn"),
   title: {
-    default: "Valencia School — Colegio Bilingüe en Tegucigalpa, Honduras",
+    default: "Valencia School — Escuela Bilingüe en Tegucigalpa, Honduras",
     template: "%s | Valencia School",
   },
   description:
-    "Colegio bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en nuestras dos sedes: Residencial Valencia y Los Hidalgos.",
+    "Escuela bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en nuestras dos sedes: Residencial Valencia y Los Hidalgos.",
   keywords: [
     "Valencia School",
     "Instituto Valencia",
-    "colegio bilingüe Honduras",
-    "colegio bilingüe Tegucigalpa",
+    "escuela bilingüe Honduras",
+    "escuela bilingüe Tegucigalpa",
     "escuela Tegucigalpa",
     "educación bilingüe",
     "preescolar Tegucigalpa",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     "Residencial Valencia",
     "Los Hidalgos",
     "Comayagüela",
-    "colegio Francisco Morazán",
+    "escuela Francisco Morazán",
   ],
   authors: [{ name: "Valencia School" }],
   creator: "Valencia School",
@@ -73,25 +73,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_HN",
     siteName: "Valencia School",
-    title: "Valencia School — Colegio Bilingüe en Tegucigalpa, Honduras",
+    title: "Valencia School — Escuela Bilingüe en Tegucigalpa, Honduras",
     description:
-      "Colegio bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en Residencial Valencia y Los Hidalgos.",
+      "Escuela bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en Residencial Valencia y Los Hidalgos.",
     url: "https://valencia-school.edu.hn",
     images: [
       {
-        // TODO: reemplazar con OG image 1200x630 dedicada
-        url: "/images/logos/valencia-logo.png",
-        alt: "Valencia School — Colegio Bilingüe en Tegucigalpa",
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Valencia School — Escuela Bilingüe en Tegucigalpa",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Valencia School — Colegio Bilingüe en Tegucigalpa, Honduras",
+    title: "Valencia School — Escuela Bilingüe en Tegucigalpa, Honduras",
     description:
-      "Colegio bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en Residencial Valencia y Los Hidalgos.",
-    // TODO: reemplazar con OG image 1200x630 dedicada
-    images: ["/images/logos/valencia-logo.png"],
+      "Escuela bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en Residencial Valencia y Los Hidalgos.",
+    images: ["/images/og-image.png"],
   },
   icons: {
     icon: "/images/icons/favicon.ico",

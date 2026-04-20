@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: [
     "primaria Valencia School",
     "primaria bilingüe Tegucigalpa",
-    "colegio primaria Honduras",
+    "escuela primaria Honduras",
     "educación primaria valores",
     "elementary school Tegucigalpa",
   ],

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "historia Valencia School",
     "misión Valencia School",
     "visión Valencia School",
-    "colegio bilingüe Tegucigalpa",
+    "escuela bilingüe Tegucigalpa",
     "trayectoria educativa Honduras",
   ],
   alternates: {

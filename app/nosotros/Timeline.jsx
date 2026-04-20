@@ -29,7 +29,7 @@ const historyEvents = [
       year: 1985,
       title: "Primer Grado y Traslado",
       detail:
-        "Se apertura el primer grado y el colegio se traslada a la Residencial Valencia, donde permanece hasta hoy.",
+        "Se apertura el primer grado y la escuela se traslada a la Residencial Valencia, donde permanece hasta hoy.",
       icon: <FaSchool />
     },
     {

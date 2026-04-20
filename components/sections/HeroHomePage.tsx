@@ -46,7 +46,7 @@ export default function HeroHomePage() {
             <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80">
               <Image
                 src={valenciaLogo}
-                alt="Valencia School — colegio bilingüe en Tegucigalpa"
+                alt="Valencia School — escuela bilingüe en Tegucigalpa"
                 fill
                 className="object-contain"
                 priority

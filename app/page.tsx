@@ -11,7 +11,7 @@ import { breadcrumbSchema, SITE_URL } from "@/app/schema"
 
 // Nota: el archivo es "use client" (requerido por componentes hijos animados),
 // por lo que la metadata propia de la Home se define en app/layout.tsx (el
-// default title del root ya cubre "Valencia School — Colegio Bilingüe..."),
+// default title del root ya cubre "Valencia School — Escuela Bilingüe..."),
 // y el canonical "/" también se declara allí.
 //
 // Sobre el H1: HeroHomePage ya renderiza un <h1> visible con el slogan

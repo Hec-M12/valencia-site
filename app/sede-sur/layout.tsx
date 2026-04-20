@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     "La Sede Sur de Valencia School en Los Hidalgos ofrece educación bilingüe con calendario anglosajón. Inaugurada en 2025, campus moderno en Comayagüela.",
   keywords: [
     "Sede Sur Valencia School",
-    "colegio Los Hidalgos",
-    "colegio bilingüe Comayagüela",
+    "escuela Los Hidalgos",
+    "escuela bilingüe Comayagüela",
     "calendario anglosajón Honduras",
     "campus Valencia Sur",
   ],

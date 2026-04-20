@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     "Ubicada en Residencial Valencia, la Sede Principal de Valencia School ofrece preescolar, primaria y secundaria bilingüe con calendario nacional.",
   keywords: [
     "Sede Principal Valencia School",
-    "colegio Residencial Valencia",
-    "colegio bilingüe Tegucigalpa",
+    "escuela Residencial Valencia",
+    "escuela bilingüe Tegucigalpa",
     "preescolar primaria secundaria Tegucigalpa",
     "calendario nacional Honduras",
   ],
