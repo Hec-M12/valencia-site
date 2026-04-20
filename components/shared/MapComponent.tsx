@@ -11,6 +11,8 @@ const MapComponent: React.FC<MapComponentProps> = ({ lat, lng }) => {
   return (
     <div className="w-full h-80 rounded-md overflow-hidden">
       <iframe
+        title="Mapa de ubicación de Valencia School"
+        loading="lazy"
         width="100%"
         height="100%"
         className="rounded-md"

@@ -18,7 +18,7 @@ type CampusHeroConfig = {
 const campusConfigs: Record<CampusVariant, CampusHeroConfig> = {
   principal: {
     image: heroPrincipal,
-    alt: 'Campus Valencia Sede Principal',
+    alt: 'Fachada de la Sede Principal de Valencia School en Residencial Valencia, Tegucigalpa',
     layout: 'principal',
     imageWrapperClass: 'mx-auto aspect-[1185/502] w-full max-w-5xl',
     imageClass: 'object-contain',
@@ -28,7 +28,7 @@ const campusConfigs: Record<CampusVariant, CampusHeroConfig> = {
   },
   sur: {
     image: heroSur,
-    alt: 'Campus Valencia Sede Sur',
+    alt: 'Campus moderno de la Sede Sur de Valencia School en Los Hidalgos, Comayagüela',
     imageWrapperClass: '-translate-x-4 sm:-translate-x-6 md:w-[75%] md:-translate-x-8 lg:w-[70%] lg:-translate-x-12 xl:-translate-x-16',
     imageClass: 'translate-x-[-20%] md:translate-x-[0%] lg:translate-x-[0%]',
     desktopTitle: 'Sede Sur',

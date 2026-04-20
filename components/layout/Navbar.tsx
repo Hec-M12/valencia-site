@@ -47,15 +47,18 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-white text-valencia-blue sticky top-0 p-5 z-30 border-b border-gray-100 shadow-md">
+    <nav
+      aria-label="Navegación principal"
+      className="bg-white text-valencia-blue sticky top-0 p-5 z-30 border-b border-gray-100 shadow-md"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
         <div className="flex justify-between items-center h-29">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/">
+            <Link href="/" aria-label="Valencia School — página de inicio">
               <Image
                 src="/images/logos/valencia-logo.png?height=60&width=160"
-                alt="Instituto Valencia Logo"
+                alt="Valencia School — página de inicio"
                 width={160}
                 height={80}
                 className="h-20 w-auto"
@@ -69,6 +72,7 @@ export default function Navbar() {
               {/* Inicio */}
               <Link
                 href="/"
+                aria-current={pathname === "/" ? "page" : undefined}
                 className={`
                   nav-link
                   hover:font-bold
@@ -82,6 +86,7 @@ export default function Navbar() {
               {/* Nosotros */}
               <Link
                 href="/nosotros"
+                aria-current={pathname === "/nosotros" ? "page" : undefined}
                 className={`
                   nav-link
                   hover:font-bold
@@ -99,6 +104,7 @@ export default function Navbar() {
               {/* Sede Principal */}
               <Link
                 href="/sede-principal"
+                aria-current={pathname === "/sede-principal" ? "page" : undefined}
                 className={`
                   nav-link
                   hover:font-bold
@@ -116,6 +122,7 @@ export default function Navbar() {
               {/* Sede Sur */}
               <Link
                 href="/sede-sur"
+                aria-current={pathname === "/sede-sur" ? "page" : undefined}
                 className={`
                   nav-link
                   hover:font-bold
@@ -153,10 +160,14 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
+              type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
               className="text-valencia-blue hover:text-valencia-yellow"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
             </button>
           </div>
         </div>
@@ -166,6 +177,7 @@ export default function Navbar() {
           {isMenuOpen && (
             <motion.div
               key="mobile-menu"
+              id="mobile-menu"
               className="md:hidden"
               initial="closed"
               animate="open"
@@ -175,6 +187,7 @@ export default function Navbar() {
               <motion.div variants={textVariants} className="px-2 pt-3 pb-1 space-y-1 sm:px-3 bg-white text-valencia-blue">
                 <Link
                   href="/"
+                  aria-current={pathname === "/" ? "page" : undefined}
                   className={`
                     nav-link
                     hover:font-bold
@@ -187,6 +200,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="/nosotros"
+                  aria-current={pathname === "/nosotros" ? "page" : undefined}
                   className={`
                     nav-link
                     hover:font-bold
@@ -199,6 +213,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="/sede-principal"
+                  aria-current={pathname === "/sede-principal" ? "page" : undefined}
                   className={`
                     nav-link
                     hover:font-bold
@@ -211,6 +226,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="/sede-sur"
+                  aria-current={pathname === "/sede-sur" ? "page" : undefined}
                   className={`
                     nav-link
                     hover:font-bold

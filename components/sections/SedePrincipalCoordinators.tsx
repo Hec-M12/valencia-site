@@ -57,7 +57,7 @@ export default function SedePrincipalCoordinators() {
                 <div className="relative aspect-[3/4] w-full max-w-[18rem] overflow-hidden rounded-3xl shadow-xl">
                   <Image
                     src={image}
-                    alt={name}
+                    alt={`Retrato de ${name}, ${description} en Valencia School Sede Principal`}
                     fill
                     className="object-cover object-center"
                     sizes="(max-width: 640px) 80vw, (max-width: 1024px) 45vw, 25vw"

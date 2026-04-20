@@ -6,9 +6,15 @@ import Image from "next/image";
 interface DivisionHeroProps {
   heading: React.ReactNode;
   src: string;
+  /**
+   * Texto completo para SEO/accesibilidad. Si se provee, se añade como
+   * <span className="sr-only"> dentro del h1 (antes del texto visible),
+   * sin alterar el diseño visual.
+   */
+  seoTitle?: string;
 }
 
-export default function DivisionHero({ heading, src }: DivisionHeroProps) {
+export default function DivisionHero({ heading, src, seoTitle }: DivisionHeroProps) {
   return (
     <section
       className="relative bg-white md:flex md:items-center opacity-90"
@@ -21,10 +27,11 @@ export default function DivisionHero({ heading, src }: DivisionHeroProps) {
     >
       {/* Icono de fondo con baja opacidad */}
       <div className="hidden md:flex md:static md:flex-shrink-0 md:opacity-100 md:w-1/2 md:justify-center opacity-25">
-        {/* Owl for desktop */}
+        {/* Owl for desktop (decorativo) */}
         <Image
           src={src}
-          alt="Búho Valencia"
+          alt=""
+          aria-hidden="true"
           width={400}
           height={400}
           className="hidden md:block lg:block xl:block 2xl:block"
@@ -33,12 +40,13 @@ export default function DivisionHero({ heading, src }: DivisionHeroProps) {
       {/* Contenido */}
       <div className="relative z-10 max-w-4xl mx-auto pt-8 px-6 text-center md:py-32 md:text-left md:mx-0 md:px-10 md:w-1/2">
         <h1 className="text-6xl md:text-8xl font-urbanist text-white">
+          {seoTitle && <span className="sr-only">{seoTitle} | </span>}
           {heading}
         </h1>
       </div>
-      {/* Owl below title on mobile */}
+      {/* Owl below title on mobile (decorativo) */}
       <div className="block md:hidden flex justify-center pt-4 pb-4">
-        <Image src={src} alt="Búho Valencia" width={275} height={275} />
+        <Image src={src} alt="" aria-hidden="true" width={275} height={275} />
       </div>
     </section>
   );

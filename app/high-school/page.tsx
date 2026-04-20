@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import Script from "next/script";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import DivisionHero from "@/components/sections/DivisionHero";
@@ -8,6 +10,32 @@ import ContactanosSection from "@/components/sections/ContactanosSection";
 import ImageSlider from "@/components/shared/ImageSlider";
 import { FaGraduationCap, FaBookOpen, FaChild } from "react-icons/fa";
 import { FileText, Calendar, Phone } from "lucide-react";
+import { breadcrumbSchema, SITE_URL } from "@/app/schema";
+
+export const metadata: Metadata = {
+  title: "Secundaria — Preparación Universitaria Bilingüe",
+  description:
+    "Secundaria bilingüe en Valencia School: preparación académica rigurosa, formación integral, liderazgo y proyección universitaria.",
+  keywords: [
+    "secundaria Valencia School",
+    "secundaria bilingüe Tegucigalpa",
+    "bachillerato Honduras",
+    "preparación universitaria Tegucigalpa",
+    "high school Tegucigalpa",
+  ],
+  alternates: {
+    canonical: "/high-school",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_HN",
+    siteName: "Valencia School",
+    title: "Secundaria — Preparación Universitaria Bilingüe | Valencia School",
+    description:
+      "Secundaria bilingüe en Valencia School: preparación académica rigurosa, formación integral, liderazgo y proyección universitaria.",
+    url: `${SITE_URL}/high-school`,
+  },
+};
 
 const admissionSteps = [
   {
@@ -147,43 +175,58 @@ const sampleImages = [
 export default function Secundaria() {
   return (
     <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Inicio", url: `${SITE_URL}/` },
+              { name: "Secundaria", url: `${SITE_URL}/high-school` },
+            ])
+          ),
+        }}
+      />
       <Navbar />
-      <DivisionHero
-        heading={
-          <>
-            <span>Secundaria</span>
-          </>
-        }
-        src="/images/backgrounds/buho-secundaria.png"
-      />
-      <CurriculumSection
-        title={curriculumData.title}
-        description={curriculumData.description}
-        subjects={curriculumData.subjects}
-      />
-      <ExtracurricularSection
-        title={extracurricularData.title}
-        description={extracurricularData.description}
-        activities={extracurricularActivities}
-      />
-      <AdmissionsSection steps={admissionSteps} />
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-valencia-blue mb-6">
-              Galería de Imágenes
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Vive la experiencia de secundaria: laboratorios, proyectos y vida
-              estudiantil.
-            </p>
+      <main>
+        <DivisionHero
+          heading={
+            <>
+              <span>Secundaria</span>
+            </>
+          }
+          src="/images/backgrounds/buho-secundaria.png"
+          seoTitle="Secundaria en Valencia School — Preparación Universitaria Bilingüe"
+        />
+        <CurriculumSection
+          title={curriculumData.title}
+          description={curriculumData.description}
+          subjects={curriculumData.subjects}
+        />
+        <ExtracurricularSection
+          title={extracurricularData.title}
+          description={extracurricularData.description}
+          activities={extracurricularActivities}
+        />
+        <AdmissionsSection steps={admissionSteps} />
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-valencia-blue mb-6">
+                Galería de Imágenes
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                Vive la experiencia de secundaria: laboratorios, proyectos y vida
+                estudiantil.
+              </p>
+            </div>
+            <ImageSlider images={sampleImages} />
           </div>
-          <ImageSlider images={sampleImages} />
+        </section>
+        <div className="w-[90%] mx-auto pb-8">
+          <ContactanosSection />
         </div>
-      </section>
-      <div className="w-[90%] mx-auto pb-8">
-        <ContactanosSection />
-      </div>
+      </main>
       <Footer />
     </>
   );

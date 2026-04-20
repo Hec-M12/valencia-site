@@ -1,15 +1,115 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
+import { Roboto, Quicksand, Urbanist } from "next/font/google"
+import Script from "next/script"
+import { organizationSchema, websiteSchema } from "@/app/schema"
 import "./globals.css"
 
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  display: "swap",
+  variable: "--font-roboto",
+})
+
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  display: "swap",
+  variable: "--font-quicksand",
+})
+
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  display: "swap",
+  variable: "--font-urbanist",
+})
+
 export const metadata: Metadata = {
-  title: "Valencia School",
-  description: "Institución bilingüe con calendario nacional y anglosajón. Educación integral en Residencial Valencia y Los Hidalgos.",
+  metadataBase: new URL("https://valencia-school.edu.hn"),
+  title: {
+    default: "Valencia School — Colegio Bilingüe en Tegucigalpa, Honduras",
+    template: "%s | Valencia School",
+  },
+  description:
+    "Colegio bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en nuestras dos sedes: Residencial Valencia y Los Hidalgos.",
+  keywords: [
+    "Valencia School",
+    "Instituto Valencia",
+    "colegio bilingüe Honduras",
+    "colegio bilingüe Tegucigalpa",
+    "escuela Tegucigalpa",
+    "educación bilingüe",
+    "preescolar Tegucigalpa",
+    "primaria Tegucigalpa",
+    "secundaria Tegucigalpa",
+    "preescolar primaria secundaria",
+    "calendario anglosajón",
+    "calendario nacional",
+    "Residencial Valencia",
+    "Los Hidalgos",
+    "Comayagüela",
+    "colegio Francisco Morazán",
+  ],
+  authors: [{ name: "Valencia School" }],
+  creator: "Valencia School",
+  publisher: "Valencia School",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_HN",
+    siteName: "Valencia School",
+    title: "Valencia School — Colegio Bilingüe en Tegucigalpa, Honduras",
+    description:
+      "Colegio bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en Residencial Valencia y Los Hidalgos.",
+    url: "https://valencia-school.edu.hn",
+    images: [
+      {
+        // TODO: reemplazar con OG image 1200x630 dedicada
+        url: "/images/logos/valencia-logo.png",
+        alt: "Valencia School — Colegio Bilingüe en Tegucigalpa",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Valencia School — Colegio Bilingüe en Tegucigalpa, Honduras",
+    description:
+      "Colegio bilingüe en Tegucigalpa con calendario nacional y anglosajón. Preescolar, primaria y secundaria en Residencial Valencia y Los Hidalgos.",
+    // TODO: reemplazar con OG image 1200x630 dedicada
+    images: ["/images/logos/valencia-logo.png"],
+  },
   icons: {
     icon: "/images/icons/favicon.ico",
     shortcut: "/images/icons/favicon.ico",
-    apple: "/images/icons/favicon.ico"
-  }
+    apple: "/images/icons/favicon.ico",
+  },
+  manifest: "/manifest.json",
+  // verification: {
+  //   google: "", // TODO: agregar token de Google Search Console
+  // },
+  category: "education",
+}
+
+export const viewport: Viewport = {
+  themeColor: "#216B8D",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -18,21 +118,29 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
-          rel="stylesheet"
+    <html
+      lang="es"
+      className={`${roboto.variable} ${quicksand.variable} ${urbanist.variable}`}
+    >
+      <body className="font-body antialiased">
+        <Script
+          id="org-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema()),
+          }}
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700;900&display=swap"
-          rel="stylesheet"
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema()),
+          }}
         />
-        <link rel="icon" href="/images/icons/favicon.ico" sizes="any" />
-        <link rel="shortcut icon" href="/images/icons/favicon.ico" />
-        <link rel="apple-touch-icon" href="/images/icons/favicon.ico" />
-      </head>
-      <body className="font-body antialiased">{children}</body>
+        {children}
+      </body>
     </html>
   )
 }

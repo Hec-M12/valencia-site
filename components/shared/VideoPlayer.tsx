@@ -58,17 +58,20 @@ export default function VideoPlayer({
     <div className="relative w-[90%] mx-auto md:w-full lg:w-[80%] pb-[56.25%] overflow-hidden rounded-lg shadow-lg">
       {!isPlaying ? (
         <button
+          type="button"
+          aria-label={coverAlt}
           className="absolute inset-0 flex items-center justify-center bg-gray-400 bg-opacity-40 group"
           onClick={() => setIsPlaying(true)}
         >
           <Image
             src={coverSrc}
-            alt={coverAlt}
+            alt=""
+            aria-hidden="true"
             fill
             className="object-contain bg-white p-8 opacity-70 transition-opacity"
           />
           <span className="relative flex items-center justify-center w-20 h-20 rounded-full bg-valencia-blue hover:bg-opacity-70 group-hover:bg-opacity-70 shadow-lg transition-opacity">
-            <Play className="w-10 h-10 text-white group-hover:bg-opacity-70 " />
+            <Play className="w-10 h-10 text-white group-hover:bg-opacity-70" aria-hidden="true" />
           </span>
         </button>
       ) : (

@@ -33,6 +33,7 @@ export default function LocationSection({
             href={gMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Abrir ubicación en Google Maps (nueva pestaña)"
             className="bg-valencia-blue text-white px-4 py-2 rounded"
           >
             Google Maps
@@ -41,6 +42,7 @@ export default function LocationSection({
             href={wazeUrl}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Abrir ubicación en Waze (nueva pestaña)"
             className="bg-valencia-blue text-white px-4 py-2 rounded"
           >
             Waze

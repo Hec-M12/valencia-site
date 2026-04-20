@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import Script from "next/script";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import DivisionHero from "@/components/sections/DivisionHero";
@@ -8,6 +10,32 @@ import ContactanosSection from "@/components/sections/ContactanosSection";
 import ImageSlider from "@/components/shared/ImageSlider";
 import { FaBookOpen, FaUsers, FaPalette, FaLanguage } from "react-icons/fa";
 import { FileText, Calendar, Phone } from "lucide-react";
+import { breadcrumbSchema, SITE_URL } from "@/app/schema";
+
+export const metadata: Metadata = {
+  title: "Primaria — Educación Bilingüe de Valores",
+  description:
+    "Primaria bilingüe en Valencia School: fundamentos sólidos, desarrollo de valores y programa completo para grados 1 a 6.",
+  keywords: [
+    "primaria Valencia School",
+    "primaria bilingüe Tegucigalpa",
+    "colegio primaria Honduras",
+    "educación primaria valores",
+    "elementary school Tegucigalpa",
+  ],
+  alternates: {
+    canonical: "/elementary",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_HN",
+    siteName: "Valencia School",
+    title: "Primaria — Educación Bilingüe de Valores | Valencia School",
+    description:
+      "Primaria bilingüe en Valencia School: fundamentos sólidos, desarrollo de valores y programa completo grados 1-6.",
+    url: `${SITE_URL}/elementary`,
+  },
+};
 
 const admissionSteps = [
   {
@@ -167,43 +195,58 @@ const sampleImages = [
 export default function Primaria() {
   return (
     <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Inicio", url: `${SITE_URL}/` },
+              { name: "Primaria", url: `${SITE_URL}/elementary` },
+            ])
+          ),
+        }}
+      />
       <Navbar />
-      <DivisionHero
-        heading={
-          <>
-            <span>Primaria</span>
-          </>
-        }
-        src="/images/backgrounds/buho-primaria.png"
-      />
-      <CurriculumSection
-        title={curriculumData.title}
-        description={curriculumData.description}
-        subjects={curriculumData.subjects}
-      />
-      <ExtracurricularSection
-        title={extracurricularData.title}
-        description={extracurricularData.description}
-        activities={extracurricularActivities}
-      />
-      <AdmissionsSection steps={admissionSteps} />
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-valencia-blue mb-6">
-              Galería de Imágenes
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Descubre cómo nuestros estudiantes de primaria aprenden, crean y
-              se divierten.
-            </p>
+      <main>
+        <DivisionHero
+          heading={
+            <>
+              <span>Primaria</span>
+            </>
+          }
+          src="/images/backgrounds/buho-primaria.png"
+          seoTitle="Primaria en Valencia School — Fundamentos Bilingües para el Futuro"
+        />
+        <CurriculumSection
+          title={curriculumData.title}
+          description={curriculumData.description}
+          subjects={curriculumData.subjects}
+        />
+        <ExtracurricularSection
+          title={extracurricularData.title}
+          description={extracurricularData.description}
+          activities={extracurricularActivities}
+        />
+        <AdmissionsSection steps={admissionSteps} />
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-valencia-blue mb-6">
+                Galería de Imágenes
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                Descubre cómo nuestros estudiantes de primaria aprenden, crean y
+                se divierten.
+              </p>
+            </div>
+            <ImageSlider images={sampleImages} />
           </div>
-          <ImageSlider images={sampleImages} />
+        </section>
+        <div className="w-[90%] mx-auto pb-8">
+          <ContactanosSection/>
         </div>
-      </section>
-      <div className="w-[90%] mx-auto pb-8">
-        <ContactanosSection/>
-      </div>
+      </main>
       <Footer />
     </>
   );

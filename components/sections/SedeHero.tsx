@@ -21,10 +21,11 @@ export default function SedeHero({ heading, src }: SedeHeroProps) {
     >
       {/* Icono de fondo con baja opacidad */}
       <div className="hidden md:flex md:static md:flex-shrink-0 md:opacity-100 md:w-1/2 md:justify-center opacity-25">
-        {/* Owl for desktop */}
+        {/* Owl for desktop (decorativo) */}
         <Image
           src={src}
-          alt="Búho Valencia"
+          alt=""
+          aria-hidden="true"
           width={400}
           height={400}
           className="hidden md:block lg:block xl:block 2xl:block"
@@ -36,9 +37,9 @@ export default function SedeHero({ heading, src }: SedeHeroProps) {
           {heading}
         </h1>
       </div>
-      {/* Owl below title on mobile */}
+      {/* Owl below title on mobile (decorativo) */}
       <div className="block md:hidden flex justify-center pt-8 pb-4">
-        <Image src={src} alt="Búho Valencia" width={275} height={275} />
+        <Image src={src} alt="" aria-hidden="true" width={275} height={275} />
       </div>
     </section>
   );

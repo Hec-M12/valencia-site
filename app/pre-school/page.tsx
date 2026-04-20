@@ -1,5 +1,6 @@
 "use client";
 
+import Script from "next/script";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import DivisionHero from "@/components/sections/DivisionHero";
@@ -10,6 +11,7 @@ import ImageSlider from "@/components/shared/ImageSlider";
 import { FaChild, FaBookOpen, FaPalette, FaLanguage } from "react-icons/fa";
 import AdmissionsSection from "@/components/sections/AdmissionsSection";
 import { FileText, Calendar, Phone } from "lucide-react";
+import { breadcrumbSchema, SITE_URL } from "@/app/schema";
 
 const subjects = [
   {
@@ -145,44 +147,59 @@ const sampleImages = [
 export default function Preescolar() {
   return (
     <>
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            breadcrumbSchema([
+              { name: "Inicio", url: `${SITE_URL}/` },
+              { name: "Preescolar", url: `${SITE_URL}/pre-school` },
+            ])
+          ),
+        }}
+      />
       <Navbar />
-      <DivisionHero
-        heading={
-          <>
-            <span>Pre</span>
-            <br />
-            <span>Escolar</span>
-          </>
-        }
-        src="/images/backgrounds/buho-pre.png"
-      />
-      <CurriculumSection
-        title={curriculumData.title}
-        description={curriculumData.description}
-        subjects={curriculumData.subjects}
-      />
-      <ExtracurricularSection
-        title={extracurricularData.title}
-        description={extracurricularData.description}
-        activities={extracurricularActivities}
-      />
-      <AdmissionsSection steps={admissionSteps} />
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-valencia-blue mb-6">
-              Galería de Imágenes
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-              Conoce nuestras instalaciones y actividades del nivel preescolar.
-            </p>
+      <main>
+        <DivisionHero
+          heading={
+            <>
+              <span>Pre</span>
+              <br />
+              <span>Escolar</span>
+            </>
+          }
+          src="/images/backgrounds/buho-pre.png"
+          seoTitle="Preescolar en Valencia School — Educación Bilingüe para la Primera Infancia"
+        />
+        <CurriculumSection
+          title={curriculumData.title}
+          description={curriculumData.description}
+          subjects={curriculumData.subjects}
+        />
+        <ExtracurricularSection
+          title={extracurricularData.title}
+          description={extracurricularData.description}
+          activities={extracurricularActivities}
+        />
+        <AdmissionsSection steps={admissionSteps} />
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-valencia-blue mb-6">
+                Galería de Imágenes
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                Conoce nuestras instalaciones y actividades del nivel preescolar.
+              </p>
+            </div>
+            <ImageSlider images={sampleImages} />
           </div>
-          <ImageSlider images={sampleImages} />
+        </section>
+        <div className="w-[90%] mx-auto pb-8">
+          <ContactanosSection />
         </div>
-      </section>
-      <div className="w-[90%] mx-auto pb-8">
-        <ContactanosSection />
-      </div>
+      </main>
       <Footer />
     </>
   );

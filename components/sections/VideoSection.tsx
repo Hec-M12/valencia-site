@@ -10,7 +10,7 @@ export default function VideoSection() {
           <VideoPlayer
             videoId="bqj3_1ISiW4"
             coverSrc="/images/logos/valencia-logo.png"
-            coverAlt="Logo Valencia School"
+            coverAlt="Reproducir video institucional de Valencia School"
           />
         </div>
         {/* Right: Contact */}

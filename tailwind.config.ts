@@ -20,9 +20,9 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        heading: ['Roboto', 'sans-serif'],
-        body: ['Quicksand', 'sans-serif'],
-        urbanist: ['Urbanist', 'sans-serif'],
+        heading: ['var(--font-roboto)', 'sans-serif'],
+        body: ['var(--font-quicksand)', 'sans-serif'],
+        urbanist: ['var(--font-urbanist)', 'sans-serif'],
       },
       fontSize: {
         // nombre de la clase: [ tamaño, { lineHeight, letterSpacing, fontWeight } ]
