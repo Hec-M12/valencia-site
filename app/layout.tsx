@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     "Comayagüela",
     "escuela Francisco Morazán",
   ],
+  verification: {
+    google: "m64BI7UQ0s9f6DXReOqTHZwjBMmXKFHCBhri9sp48Pc",
+  },
   authors: [{ name: "Valencia School" }],
   creator: "Valencia School",
   publisher: "Valencia School",
