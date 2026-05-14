@@ -2,10 +2,21 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+
+const FACTS_LINKS = [
+  {
+    label: "Family Portal",
+    href: "https://logins2.renweb.com/logins/ParentsWeb-Login.aspx",
+  },
+  {
+    label: "FACTS SIS",
+    href: "https://sis.factsmgt.com/admin",
+  },
+];
 
 const menuVariants = {
   open: {
@@ -137,6 +148,42 @@ export default function Navbar() {
               >
                 Sede Sur
               </Link>
+              {/* FACTS dropdown */}
+              <div className="relative group">
+                <button
+                  type="button"
+                  aria-haspopup="menu"
+                  aria-expanded="false"
+                  className="nav-link inline-flex items-center gap-1 text-valencia-blue hover:font-bold hover:text-valencia-light-blue group-hover:font-bold group-hover:text-valencia-light-blue group-focus-within:font-bold group-focus-within:text-valencia-light-blue"
+                >
+                  FACTS
+                  <ChevronDown
+                    size={16}
+                    aria-hidden="true"
+                    className="transition-transform duration-200 group-hover:rotate-180 group-focus-within:rotate-180"
+                  />
+                </button>
+                <div
+                  role="menu"
+                  aria-label="FACTS"
+                  className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-56 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 transition-all duration-200 z-40"
+                >
+                  <div className="bg-white border border-gray-100 rounded-md shadow-lg py-2">
+                    {FACTS_LINKS.map((item) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        role="menuitem"
+                        className="block px-4 py-2 text-sm text-valencia-blue hover:bg-gray-50 hover:text-valencia-light-blue hover:font-bold transition-colors"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
               {/* Contacto */}
               <Link
                 href="/#contacto"
@@ -237,6 +284,22 @@ export default function Navbar() {
                 >
                   Sede Sur
                 </Link>
+                <div className="px-3 py-2">
+                  <div className="text-valencia-blue font-bold">FACTS</div>
+                  <div className="mt-1 ml-3 flex flex-col space-y-1">
+                    {FACTS_LINKS.map((item) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="nav-link text-valencia-blue hover:font-bold py-1 transition-colors duration-200"
+                      >
+                        {item.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
                 <Link
                   href="/#contacto"
                   className={`
